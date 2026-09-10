@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Renovatie in Purmerend | Aannemersbedrijf J. Boom</title>
+<meta name="description" content="Een dak dat op is, kozijnen die niet meer sluiten, stucwerk dat loslaat. Renovatie is geen nieuw huis maar hetzelfde huis, weer in orde." />
+<link rel="canonical" href="https://www.jboom.nl/renovatie.html" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Aannemersbedrijf J. Boom v.o.f." />
+<meta name="theme-color" content="#FFFFFF" />
+<meta name="color-scheme" content="light" />
+
+<!-- GSAP en Barba komen van jsDelivr. Het opzetten van die verbinding (dns,
+     tcp, tls) kost op een telefoon een paar honderd ms en begint nu al terwijl
+     de HTML nog binnenkomt, in plaats van pas onderaan de pagina. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+<!-- Het lettertype staat in de kop van de pagina en is dus onderdeel van de
+     LCP. Zonder preload vindt de browser het pas nadat styleguide.css binnen is
+     en ontleed is. crossorigin moet erbij, ook al staat het bestand op dezelfde
+     server: een font wordt altijd in CORS-modus opgehaald, en zonder dat woord
+     haalt de browser het twee keer op. -->
+<link rel="preload" href="assets/fonts/open-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+<link rel="stylesheet" href="styleguide.min.css?v=77fa4f25" />
+<style>[data-barba=wrapper]{position:relative}.app__wrapper{background-color:var(--color-background, #FFFFFF);color:var(--color-text-primary, #1A171B);min-height:100svh;display:flex;flex-direction:column}.content__wrapper{position:relative;width:100%;min-height:100svh;flex:1 0 auto;display:flex;flex-direction:column}[data-barba=container]+[data-barba=container]{position:fixed;inset:0;z-index:3;overflow:hidden}.is__transitioning a{pointer-events:none}@media(prefers-reduced-motion:reduce){.is__transitioning *{scroll-behavior:auto!important}}</style>
+<!-- De cookiebalk verschijnt pas als cookiebalk.js hem opbouwt, dus zijn stijl
+     hoeft de eerste weergave niet op te houden. media="print" laat de browser
+     hem buiten het kritieke pad ophalen; onload zet hem daarna alsnog aan. De
+     noscript-regel vangt op dat zonder JavaScript ook die onload niet afgaat. -->
+<link rel="stylesheet" href="cookiebalk.min.css?v=6d43e37e" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="cookiebalk.min.css?v=6d43e37e" /></noscript>
+<style data-page-css="service">.hero--actions{margin-top:var(--space-700);display:flex;flex-wrap:wrap;gap:var(--space-300)}.trap{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}.trede{display:flex;gap:var(--space-500);padding:var(--space-panel) var(--inset-x);background-color:var(--color-white);margin-left:calc(var(--trede) * 6%);border-left:4px solid var(--color-geel)}.trede:nth-child(2n){background-color:var(--color-grey)}@media(max-width:991px){.trede{margin-left:0;padding:var(--space-panel-md) var(--inset-x)}}@media(max-width:576px){.trede{flex-direction:column;gap:var(--space-300);padding:var(--space-panel-sm) var(--inset-x)}}.trede__nummer{flex-shrink:0;font-family:var(--font-light);font-weight:var(--weight-light);font-size:2rem;line-height:1;color:var(--color-text-primary)}.trede__inhoud{display:flex;flex-direction:column;gap:var(--space-300);max-width:var(--content-max-half)}.trede__titel{font-size:clamp(1.25rem,1rem + 1vw,2rem);line-height:1.1}.trede__tekst{font-family:var(--font-regular);font-weight:var(--weight-regular);font-size:1rem;line-height:1.5;margin:0}.trede__gedrag{font-family:var(--font-regular);font-weight:var(--weight-regular);font-size:.875rem;line-height:1.5;margin:0}.trede__gedrag span{display:block;margin-bottom:var(--space-100);font-family:var(--font-medium);font-weight:var(--weight-medium);font-size:.6875rem;letter-spacing:var(--tracking-label);text-transform:uppercase}.voordeel__icoon{fill:var(--color-text-primary);width:24px;height:24px}.voordeel__titel{font-size:1.5rem;line-height:1.1}.projectkaart__klant{font-family:var(--font-medium);font-weight:var(--weight-medium);font-size:.6875rem;letter-spacing:var(--tracking-label);text-transform:uppercase;margin:0}</style>
+
+<link rel="icon" href="assets/favicon/jboom-favicon.ico" sizes="16x16 32x32 48x48" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/jboom-favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/jboom-favicon-192.png" />
+<link rel="apple-touch-icon" href="assets/favicon/jboom-apple-touch-icon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Aannemersbedrijf J. Boom" />
+<meta property="og:locale" content="nl_NL" />
+<meta property="og:url" content="https://www.jboom.nl/renovatie.html" />
+<meta property="og:title" content="Renovatie in Purmerend | Aannemersbedrijf J. Boom" />
+<meta property="og:description" content="Een dak dat op is, kozijnen die niet meer sluiten, stucwerk dat loslaat. Renovatie is geen nieuw huis maar hetzelfde huis, weer in orde." />
+<meta property="og:image" content="https://www.jboom.nl/assets/social/jboom-deelafbeelding.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Aannemersbedrijf J. Boom v.o.f.: aanbouw, verbouw, dakkapellen en kunststof kozijnen" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.jboom.nl/assets/social/jboom-deelafbeelding.png" />
+<meta name="twitter:title" content="Renovatie in Purmerend | Aannemersbedrijf J. Boom" />
+<meta name="twitter:description" content="Een dak dat op is, kozijnen die niet meer sluiten, stucwerk dat loslaat. Renovatie is geen nieuw huis maar hetzelfde huis, weer in orde." />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Aannemersbedrijf J. Boom v.o.f.",
+  "alternateName": "Aannemersbedrijf J. Boom",
+  "foundingDate": "1935",
+  "url": "https://www.jboom.nl/",
+  "logo": "https://www.jboom.nl/assets/logo/jboom-logo.png",
+  "image": "https://www.jboom.nl/assets/social/jboom-deelafbeelding.png",
+  "email": "info@jboom.nl",
+  "telephone": "+31299433498",
+  "sameAs": ["https://www.facebook.com/AannemersbedrijfJ.Boom"],
+  "identifier": { "@type": "PropertyValue", "name": "KvK", "value": "36019793" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Pascalstraat 24",
+    "postalCode": "1446 TX",
+    "addressLocality": "Purmerend",
+    "addressCountry": "NL"
+  },
+  "areaServed": { "@type": "City", "name": "Purmerend" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Renovatie",
+  "name": "Renovatie",
+  "description": "Een dak dat op is, kozijnen die niet meer sluiten, stucwerk dat loslaat. Renovatie is geen nieuw huis maar hetzelfde huis, weer in orde.",
+  "areaServed": {
+    "@type": "City",
+    "name": "Purmerend"
+  },
+  "provider": {
+    "@type": "GeneralContractor",
+    "name": "Aannemersbedrijf J. Boom v.o.f."
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat is het verschil tussen renovatie en verbouwing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bij renovatie vervangt of herstelt u wat er is en blijft de indeling in grote lijnen zoals hij was. Bij een verbouwing verandert de indeling of de constructie. In de praktijk lopen ze in elkaar over: een dak dat vervangen wordt is renovatie, maar een dakkapel erbij is verbouwing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Heb ik voor renovatie een vergunning nodig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gewoon onderhoud en het vervangen van onderdelen door gelijkwaardige is meestal vergunningvrij. Verandert het uiterlijk van de woning, of raakt het de constructie, dan kan het anders liggen — en bij een monument of in een beschermd stadsgezicht gelden aparte regels. De vergunningcheck van het Omgevingsloket is het startpunt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ik onderdelen los laten doen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. We zetten de offerte per onderdeel op, zodat u kunt kiezen wat nu gebeurt en wat later. We geven daarbij aan welk werk beter in een keer kan, omdat het anders dubbel wordt gedaan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is renovatie het moment om te isoleren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vaak wel. Als een dak of een gevel toch open moet, kost isoleren relatief weinig extra ten opzichte van een apart isolatieproject later. Vervangt u een constructieonderdeel, dan stelt het Besluit bouwwerken leefomgeving daar bovendien minimumeisen aan."
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Naar de inhoud</a>
+
+<!-- De header en het mobiele paneel staan bewust BUITEN #smooth-wrapper.
+     ScrollSmoother verschuift de inhoud met een transform, en onder een
+     transform hangt position:fixed aan dat element in plaats van aan het
+     scherm. Ze blijven daardoor ook staan bij een pagina-overgang; welke
+     menulink actief is wordt in page-transitions.js bijgewerkt. -->
+<header class="header header--scrolled" id="siteHeader">
+  <div class="header--container">
+    <a href="index.html" class="header--logo" aria-label="Aannemersbedrijf J. Boom, naar de homepage">
+      <img class="header--logo-kleur" src="assets/logo/jboom-logo.webp" alt="Aannemersbedrijf J. Boom" width="134" height="40">
+      <img class="header--logo-wit" src="assets/logo/jboom-logo-wit.webp" alt="" aria-hidden="true" width="134" height="40">
+    </a>
+
+    <nav class="submenu" aria-label="Hoofdmenu">
+      <a class="submenu--link" href="index.html">Home</a>
+      <button type="button" class="submenu--link is-actief submenu--trigger" data-uitklap="diensten" aria-expanded="false" aria-controls="uitklap-diensten">Diensten<svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.4 5.6 9 7 7.6l5 5 5-5L18.4 9 12 15.4Z"/></svg></button>
+      <button type="button" class="submenu--link submenu--trigger" data-uitklap="projecten" aria-expanded="false" aria-controls="uitklap-projecten">Projecten<svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.4 5.6 9 7 7.6l5 5 5-5L18.4 9 12 15.4Z"/></svg></button>
+      <a class="submenu--link" href="offerte.html">Offerte</a>
+      <a class="submenu--link" href="over-ons.html">Over ons</a>
+      <a class="submenu--link highlight" href="contact.html">Contact</a>
+    </nav>
+
+    <button type="button" id="hamburger" class="hamburger" aria-expanded="false" aria-controls="mobilePanel">
+      Menu
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v2H2V5Zm0 6h20v2H2v-2Zm0 6h20v2H2v-2Z"/></svg>
+    </button>
+  </div>
+
+  <div class="uitklap" id="uitklap-diensten" data-uitklap-paneel="diensten" inert>
+    <div class="uitklap__inner">
+      <div class="uitklap__kolom">
+        <span class="subtitle">Diensten</span>
+        <ul class="uitklap__lijst" role="list">
+          <li><a class="uitklap__link" href="diensten.html"><span class="uitklap__naam">Alle diensten</span><span class="uitklap__uitleg">Wat we doen, en welke dienst bij uw vraag past</span></a></li>
+          <li><a class="uitklap__link" href="aanbouw-en-uitbouw.html"><span class="uitklap__naam">Aanbouw en uitbouw</span><span class="uitklap__uitleg">Extra woonruimte tegen de bestaande woning aan</span></a></li>
+          <li><a class="uitklap__link" href="deuren-en-puien.html"><span class="uitklap__naam">Deuren en puien</span><span class="uitklap__uitleg">Voordeuren, openslaande deuren en schuifpuien</span></a></li>
+          <li><a class="uitklap__link" href="verbouw.html"><span class="uitklap__naam">Verbouw</span><span class="uitklap__uitleg">Dezelfde meters anders indelen, van muurdoorbraak tot schuifpui</span></a></li>
+          <li><a class="uitklap__link" href="dakopbouw-en-dakkapel.html"><span class="uitklap__naam">Dakopbouw en dakkapel</span><span class="uitklap__uitleg">Stahoogte en daglicht op de zolder</span></a></li>
+          <li><a class="uitklap__link" href="renovatie.html"><span class="uitklap__naam">Renovatie</span><span class="uitklap__uitleg">Dak, gevel en afwerking weer in orde</span></a></li>
+          <li><a class="uitklap__link" href="nieuwbouw.html"><span class="uitklap__naam">Nieuwbouw</span><span class="uitklap__uitleg">Een woning of bijgebouw op maat, van tekening tot oplevering</span></a></li>
+          <li><a class="uitklap__link" href="bouwadvies.html"><span class="uitklap__naam">Bouwadvies en bouwtekening</span><span class="uitklap__uitleg">Bouwtekeningen en advies over wat er kan en mag</span></a></li>
+          <li><a class="uitklap__link" href="kunststof-kozijnen.html"><span class="uitklap__naam">Kunststof kozijnen en voorgevels</span><span class="uitklap__uitleg">Onderhoudsarm, isolerend en bouwkundig aangezet</span></a></li>
+          <li><a class="uitklap__link" href="gevelbekleding.html"><span class="uitklap__naam">Gevelbekleding</span><span class="uitklap__uitleg">Een nieuw front voor uw gevel, met isolatie erachter</span></a></li>
+        </ul>
+      </div>
+      <div class="uitklap__kaart">
+        <picture><source type="image/avif" srcset="assets/foto/jboom-aanbouw-16-420.avif 420w, assets/foto/jboom-aanbouw-16-640.avif 640w, assets/foto/jboom-aanbouw-16-800.avif 800w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/jboom-aanbouw-16-800.webp" srcset="assets/foto/jboom-aanbouw-16-420.webp 420w, assets/foto/jboom-aanbouw-16-640.webp 640w, assets/foto/jboom-aanbouw-16-800.webp 800w" sizes="(max-width: 1199px) 0px, 40vw" width="800" height="598" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture>
+        <span class="uitklap__sluier" aria-hidden="true"></span>
+        <div class="uitklap__kaart-tekst">
+          <p class="uitklap__kaart-kop">Weet u nog niet wat u nodig heeft?</p>
+          <p class="uitklap__kaart-body">Vertel wat u wilt bereiken. In een vrijblijvend orientatiegesprek kijken we wat er kan.</p>
+          <a href="offerte.html" class="button button--primary"><span class="button__inhoud">Vraag een offerte aan<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg></span></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="uitklap" id="uitklap-projecten" data-uitklap-paneel="projecten" inert>
+    <div class="uitklap__inner">
+      <div class="uitklap__kolom">
+        <span class="subtitle">Projecten</span>
+        <ul class="uitklap__lijst" role="list">
+          <li><a class="uitklap__link" href="projecten.html"><span class="uitklap__naam">Alle projecten</span><span class="uitklap__uitleg">Werk dat in en rondom Purmerend is opgeleverd</span></a></li>
+          <li><a class="uitklap__link" href="projecten-aanbouw-opbouw-verbouw.html"><span class="uitklap__naam">Aanbouw, opbouw en verbouw</span><span class="uitklap__uitleg">46 foto&rsquo;s</span></a></li>
+          <li><a class="uitklap__link" href="projecten-dakkapellen-gevels-kozijnen-deuren.html"><span class="uitklap__naam">Dakkapellen, gevels, kozijnen en deuren</span><span class="uitklap__uitleg">33 foto&rsquo;s</span></a></li>
+          <li><a class="uitklap__link" href="referenties.html"><span class="uitklap__naam">Klanten over J. Boom</span><span class="uitklap__uitleg">7 referenties, ondertekend</span></a></li>
+        </ul>
+      </div>
+      <div class="uitklap__kaart">
+        <picture><source type="image/avif" srcset="assets/foto/jboom-dakkapel-05-420.avif 420w, assets/foto/jboom-dakkapel-05-640.avif 640w, assets/foto/jboom-dakkapel-05-800.avif 800w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/jboom-dakkapel-05-800.webp" srcset="assets/foto/jboom-dakkapel-05-420.webp 420w, assets/foto/jboom-dakkapel-05-640.webp 640w, assets/foto/jboom-dakkapel-05-800.webp 800w" sizes="(max-width: 1199px) 0px, 40vw" width="800" height="600" alt="" loading="lazy" fetchpriority="low" decoding="async"></picture>
+        <span class="uitklap__sluier" aria-hidden="true"></span>
+        <div class="uitklap__kaart-tekst">
+          <p class="uitklap__kaart-kop">Klanten over J. Boom</p>
+          <p class="uitklap__kaart-body">Wat opdrachtgevers zelf over het werk schreven, met naam en datum erbij.</p>
+          <a href="referenties.html" class="button button--primary"><span class="button__inhoud">Lees de referenties<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg></span></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel--overlay" id="panelOverlay" hidden></div>
+<div class="mobile-panel" id="mobilePanel" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mobile-panel--topbar">
+    <a class="mobile-panel--chip" href="contact.html">Contact</a>
+    <button type="button" class="mobile-panel--chip is-close" id="panelSluit">
+      Sluiten
+      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6L19 6.4Z"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-panel--nav" aria-label="Hoofdmenu">
+    <span class="mobile-panel--label">Menu</span>
+    <ul class="mobile-panel--list" role="list">
+      <li><a class="mobile-panel--nav-link" href="index.html" data-panel-sluit style="transition-delay:0ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Home</span><span aria-hidden="true">Home</span></span></span></a></li>
+      <li>
+        <button type="button" class="mobile-panel--nav-link mobile-panel--nav-knop"
+                data-mobiel-uitklap="diensten" aria-expanded="false"
+                aria-controls="mobiel-diensten" style="transition-delay:60ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Diensten</span><span aria-hidden="true">Diensten</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.4 5.6 9 7 7.6l5 5 5-5L18.4 9 12 15.4Z"/></svg></button>
+        <ul class="mobile-panel--sublijst" id="mobiel-diensten" role="list" hidden>
+          <li><a class="mobile-panel--sublink" href="diensten.html" data-panel-sluit>Alle diensten</a></li>
+          <li><a class="mobile-panel--sublink" href="aanbouw-en-uitbouw.html" data-panel-sluit>Aanbouw en uitbouw</a></li>
+          <li><a class="mobile-panel--sublink" href="deuren-en-puien.html" data-panel-sluit>Deuren en puien</a></li>
+          <li><a class="mobile-panel--sublink" href="verbouw.html" data-panel-sluit>Verbouw</a></li>
+          <li><a class="mobile-panel--sublink" href="dakopbouw-en-dakkapel.html" data-panel-sluit>Dakopbouw en dakkapel</a></li>
+          <li><a class="mobile-panel--sublink" href="renovatie.html" data-panel-sluit>Renovatie</a></li>
+          <li><a class="mobile-panel--sublink" href="nieuwbouw.html" data-panel-sluit>Nieuwbouw</a></li>
+          <li><a class="mobile-panel--sublink" href="bouwadvies.html" data-panel-sluit>Bouwadvies en bouwtekening</a></li>
+          <li><a class="mobile-panel--sublink" href="kunststof-kozijnen.html" data-panel-sluit>Kunststof kozijnen en voorgevels</a></li>
+          <li><a class="mobile-panel--sublink" href="gevelbekleding.html" data-panel-sluit>Gevelbekleding</a></li>
+        </ul>
+      </li>
+      <li>
+        <button type="button" class="mobile-panel--nav-link mobile-panel--nav-knop"
+                data-mobiel-uitklap="projecten" aria-expanded="false"
+                aria-controls="mobiel-projecten" style="transition-delay:120ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Projecten</span><span aria-hidden="true">Projecten</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.4 5.6 9 7 7.6l5 5 5-5L18.4 9 12 15.4Z"/></svg></button>
+        <ul class="mobile-panel--sublijst" id="mobiel-projecten" role="list" hidden>
+          <li><a class="mobile-panel--sublink" href="projecten.html" data-panel-sluit>Alle projecten</a></li>
+          <li><a class="mobile-panel--sublink" href="projecten-aanbouw-opbouw-verbouw.html" data-panel-sluit>Aanbouw, opbouw en verbouw</a></li>
+          <li><a class="mobile-panel--sublink" href="projecten-dakkapellen-gevels-kozijnen-deuren.html" data-panel-sluit>Dakkapellen, gevels, kozijnen en deuren</a></li>
+          <li><a class="mobile-panel--sublink" href="referenties.html" data-panel-sluit>Klanten over J. Boom</a></li>
+        </ul>
+      </li>
+      <li><a class="mobile-panel--nav-link" href="offerte.html" data-panel-sluit style="transition-delay:180ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Offerte</span><span aria-hidden="true">Offerte</span></span></span></a></li>
+      <li><a class="mobile-panel--nav-link" href="over-ons.html" data-panel-sluit style="transition-delay:240ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Over ons</span><span aria-hidden="true">Over ons</span></span></span></a></li>
+    </ul>
+  </nav>
+  <div class="mobile-panel--cta button__mobile-width">
+    <a href="tel:+31299433498" class="button button--primary"><span class="button__inhoud">Bel 0299 - 43 34 98<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg></span></span></a>
+  </div>
+</div>
+
+<div id="smooth-wrapper">
+<div id="smooth-content">
+
+<div data-barba="wrapper">
+<div class="app__wrapper" data-barba="container" data-barba-namespace="dienst">
+<div class="content__wrapper">
+
+<main id="main-content">
+
+  <section class="paginahero" id="s01-introductie">
+    <div class="paginahero__kop">
+      <span class="subtitle">Verbouw</span>
+      <h1 class="paginahero__titel">Renovatie</h1>
+    </div>
+    <div class="paginahero__beeld">
+      <picture><source type="image/avif" srcset="assets/foto/jboom-aanbouw-32-420.avif 420w, assets/foto/jboom-aanbouw-32-640.avif 640w, assets/foto/jboom-aanbouw-32-800.avif 800w" sizes="(max-width: 767px) 100vw, 50vw"><img src="assets/foto/jboom-aanbouw-32-800.webp" srcset="assets/foto/jboom-aanbouw-32-420.webp 420w, assets/foto/jboom-aanbouw-32-640.webp 640w, assets/foto/jboom-aanbouw-32-800.webp 800w" sizes="(max-width: 767px) 100vw, 50vw" width="800" height="675" alt="Woning die aan de achterzijde is vergroot" loading="eager" fetchpriority="high" decoding="async"></picture>
+    </div>
+  </section>
+
+  <section class="content-text-side-cta" id="s02-statement">
+    <div class="container">
+      <div class="content-text-side-cta--container">
+        <div class="row gx-0">
+          <div class="col-lg-8 col-12">
+            <div class="content-text-side-cta--body article-body">
+              <p>Een dak dat op is, kozijnen die niet meer sluiten, stucwerk dat loslaat. Renovatie is geen nieuw huis maar hetzelfde huis, weer in orde.</p>
+              <p>De volgorde is het halve werk: eerst wat de woning droog en heel houdt, dan de isolatie en de installaties, dan pas de afwerking. Zo doet u niets twee keer.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12 statement__actie">
+            <a href="offerte.html" class="button button--primary"><span class="button__inhoud">Vraag een offerte aan<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg></span></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block" id="s03-wanneer">
+    <div class="container">
+      <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
+        <div class="row">
+          <div class="col-md-8 col-12">
+            <span class="subtitle" style="margin-bottom:var(--space-500)">Herkenbaar?</span>
+            <h2 class="section-heading">Wanneer een woning aan een opknapbeurt toe is</h2>
+            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">Renovatie gaat niet over anders wonen maar over beter wonen in hetzelfde huis. Meestal begint het bij een onderdeel dat op is.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel-row panel-row--3">
+        <div>
+          <div class="panel panel--grey">
+            <span class="panel__meta">Situatie 01</span>
+            <h3 class="panel__title">Het dak is aan vervanging toe</h3>
+            <p class="panel__body">Losse of gebroken pannen, een versleten dakbedekking op een plat dak, of een dakbeschot dat aan het eind van zijn leven is. Een dak dat lekt beschadigt alles eronder.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--wit">
+            <span class="panel__meta">Situatie 02</span>
+            <h3 class="panel__title">De afwerking is versleten</h3>
+            <p class="panel__body">Stucwerk dat loslaat, plafonds die scheuren, kozijnen die niet meer sluiten. Op zichzelf klein werk, maar het bepaalt hoe de hele woning aanvoelt.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--grey">
+            <span class="panel__meta">Situatie 03</span>
+            <h3 class="panel__title">U heeft een woning gekocht die eerst aangepakt moet worden</h3>
+            <p class="panel__body">Bij een oudere woning is de volgorde belangrijk: eerst wat waterdicht en constructief in orde moet zijn, dan pas de afwerking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block" id="s04-uitleg">
+    <div class="container">
+      <div class="content-block--container background--white">
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <span class="subtitle" style="margin-bottom:var(--space-500)">Hoe het werkt</span>
+            <h2 class="section-heading" style="margin-bottom:var(--space-500)">Wat renovatie is, en waarom de volgorde ertoe doet</h2>
+            <div class="article-body">
+              <p>Is uw dak aan vervanging toe of kan uw huiskamer wel een nieuw laagje stucwerk gebruiken? Laat ons uw huis opknappen.</p>
+              <p>Bij renovatie vervangt of herstelt u wat er is, zonder de indeling wezenlijk te veranderen. Dat maakt het minder ingrijpend dan een verbouwing, maar niet eenvoudiger: u werkt aan onderdelen die al jaren met elkaar samenwerken, en wat u vervangt moet op de rest aansluiten.</p>
+              <p>De volgorde is bijna altijd dezelfde. Eerst wat het huis droog en heel houdt: dak, goten, gevel en kozijnen. Dan wat eronder zit: isolatie, leidingen, elektra. Pas daarna de afwerking, want stucwerk dat na een lekkage is aangebracht mag u overdoen.</p>
+              <p>Renovatie is ook het natuurlijke moment om te isoleren. Als het dak er toch af gaat, is isoleren aan de buitenkant een kleine stap extra; als het achteraf moet gebeuren, is het een apart project.</p>
+              <p>Voor verbouw geldt daarbij dat u niet onder het bestaande niveau mag uitkomen, en dat het Besluit bouwwerken leefomgeving minimumeisen stelt zodra u een constructieonderdeel vervangt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band background--grey" id="s05-aanpak">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <span class="subtitle" style="margin-bottom:var(--space-500)">Aanpak</span>
+          <h2 class="section-heading">Hoe een renovatie loopt</h2>
+          <p class="article-body" style="margin-top:var(--space-500)">Renovatie is bij uitstek werk waarbij het loont om eerst te kijken en dan pas te beginnen: wat u openhaalt, bepaalt de rest van het werk.</p>
+          <div style="margin-top:var(--space-600)">
+            <a href="werkwijze.html" class="button button--secundair"><span class="button__inhoud">Onze werkwijze<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg></span></span></a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-12">
+          <ol class="trap" role="list">
+        <li class="trede" style="--trede:0">
+          <span class="trede__nummer">01</span>
+          <div class="trede__inhoud">
+            <h3 class="trede__titel">Opname en beoordeling</h3>
+            <p class="trede__tekst">Wat is er aan de hand, hoe ver reikt het, en wat kan blijven zitten. Bij een dak: de staat van pannen, panlatten, dakbeschot en isolatie.</p>
+            
+          </div>
+        </li>
+        <li class="trede" style="--trede:1">
+          <span class="trede__nummer">02</span>
+          <div class="trede__inhoud">
+            <h3 class="trede__titel">Voorstel met een volgorde erin</h3>
+            <p class="trede__tekst">Wat er nu moet, wat er tegelijk verstandig is en wat kan wachten. Dat scheelt later dubbel werk.</p>
+            <p class="trede__gedrag"><span>Goed om te weten</span> Werk dat elkaar raakt, doen we in een keer: een dak dat er toch af gaat, is het moment om te isoleren.</p>
+          </div>
+        </li>
+        <li class="trede" style="--trede:2">
+          <span class="trede__nummer">03</span>
+          <div class="trede__inhoud">
+            <h3 class="trede__titel">Offerte</h3>
+            <p class="trede__tekst">Per onderdeel, zodat u kunt kiezen wat u nu laat doen en wat later.</p>
+            
+          </div>
+        </li>
+        <li class="trede" style="--trede:3">
+          <span class="trede__nummer">04</span>
+          <div class="trede__inhoud">
+            <h3 class="trede__titel">Uitvoering</h3>
+            <p class="trede__tekst">Wat het huis droog en heel houdt eerst, de afwerking daarna. Stukadoorswerk en spuitwerk lopen via Peter Helmich, loodgieterswerk via Sanders.</p>
+            
+          </div>
+        </li>
+        <li class="trede" style="--trede:4">
+          <span class="trede__nummer">05</span>
+          <div class="trede__inhoud">
+            <h3 class="trede__titel">Nalopen</h3>
+            <p class="trede__tekst">We lopen het werk met u na, buiten en binnen. Wat u ziet, nemen we mee.</p>
+            
+          </div>
+        </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block" id="s06-input">
+    <div class="container">
+      <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
+        <div class="row">
+          <div class="col-md-8 col-12">
+            <span class="subtitle" style="margin-bottom:var(--space-500)">Wat u aanlevert</span>
+            <h2 class="section-heading">Wat wij van u nodig hebben</h2>
+            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">Bij renovatie is de geschiedenis van de woning het halve verhaal.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel-row panel-row--4">
+        <div>
+          <div class="panel panel--grey">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h4v4H3V5Zm6 1h12v2H9V6ZM3 10h4v4H3v-4Zm6 1h12v2H9v-2ZM3 15h4v4H3v-4Zm6 1h12v2H9v-2Z"/></svg>
+            <h3 class="voordeel__titel">Wat u opvalt</h3>
+            <p class="panel__body">Vochtplekken, scheuren, tocht, deuren die klemmen. Ook wanneer het begon, als u dat weet.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--wit">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-1 3v6l5 3 1-1.7-4-2.3V7h-2Z"/></svg>
+            <h3 class="voordeel__titel">Het bouwjaar en wat er eerder is gedaan</h3>
+            <p class="panel__body">Een eerdere verbouwing, een vervangen dak of nieuwe kozijnen bepalen wat we aantreffen.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--grey">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6.5c0 4.6 3.2 8.4 8 10.5 4.8-2.1 8-5.9 8-10.5V5l-8-3Zm0 2.2 6 2.2v5.1c0 3.5-2.3 6.5-6 8.3-3.7-1.8-6-4.8-6-8.3V6.4l6-2.2Z"/></svg>
+            <h3 class="voordeel__titel">Wat u weet over asbest</h3>
+            <p class="panel__body">Bij woningen van voor 1994 hoort er voor sloopwerk een asbestinventarisatie te liggen. Is die er al, dan helpt dat.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--wit">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v14H6V2Zm2 2v16h10V9h-5V4H8Zm7 .4V7h2.6L15 4.4ZM9 12h8v2H9v-2Zm0 4h8v2H9v-2Z"/></svg>
+            <h3 class="voordeel__titel">Rapporten die er al zijn</h3>
+            <p class="panel__body">Een bouwkundige keuring bij aankoop, of een rapport van een eerdere inspectie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block" id="s07-oplevering">
+    <div class="container">
+      <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
+        <div class="row">
+          <div class="col-md-8 col-12">
+            <span class="subtitle" style="margin-bottom:var(--space-500)">Oplevering</span>
+            <h2 class="section-heading">Wat u van ons krijgt</h2>
+          </div>
+        </div>
+      </div>
+      <div class="panel-row panel-row--4">
+        <div>
+          <div class="panel panel--grey">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h4v4H3V5Zm6 1h12v2H9V6ZM3 10h4v4H3v-4Zm6 1h12v2H9v-2ZM3 15h4v4H3v-4Zm6 1h12v2H9v-2Z"/></svg>
+            <h3 class="voordeel__titel">Een beoordeling van wat er is</h3>
+            <p class="panel__body">Wat er aan de hand is, hoe ver het reikt en wat er kan blijven zitten.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--wit">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21v-4h5v-4h5V9h5V5h3v18H3Zm2-2h14V7h-1v4h-5v4H8v4H5v0Z"/></svg>
+            <h3 class="voordeel__titel">Een volgorde die klopt</h3>
+            <p class="panel__body">Eerst droog en heel, dan isolatie en installaties, dan afwerking.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--grey">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.6 16.2 5.4 12l-1.4 1.4 5.6 5.6L20.4 8.2 19 6.8 9.6 16.2Z"/></svg>
+            <h3 class="voordeel__titel">Werk dat af is opgeleverd</h3>
+            <p class="panel__body">Met de vaste stukadoors, metselaars en elektriciens waarmee we werken.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--wit">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 3c0 9-5.2 14-11 14a6 6 0 0 1-2.5-.5C5 19 4.4 20.6 4 22H2c.5-2.3 1.4-4.6 3.3-7.2C4.5 13.6 4 12 4 10c0-4 3-7 8-7h8Zm-2.2 2H12c-3.9 0-6 2.1-6 5 0 1.1.2 2 .6 2.8C9 9.6 12.3 7.6 16 6.6c-3.4 1.7-6.2 4.2-8.3 8.2.5.1 1 .2 1.3.2 4.4 0 8.4-3.6 8.8-10Z"/></svg>
+            <h3 class="voordeel__titel">Een moment om te isoleren</h3>
+            <p class="panel__body">Waar het werk het toch al openlegt, wijzen we u erop. Dat scheelt een tweede project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block" id="s08-voordelen">
+    <div class="container">
+      <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
+        <div class="row">
+          <div class="col-md-8 col-12">
+            <span class="subtitle" style="margin-bottom:var(--space-500)">Waarom J. Boom</span>
+            <h2 class="section-heading">Waarom mensen hiervoor bij J. Boom uitkomen</h2>
+          </div>
+        </div>
+      </div>
+      <div class="panel-row panel-row--4">
+        <div>
+          <div class="panel panel--grey">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0-6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm7 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 21v-2c0-2.8 3.1-4 7-4s7 1.2 7 4v2H2Zm2-2h10c0-1.2-1.9-2-5-2s-5 .8-5 2Zm14 2v-2c0-1.2-.4-2.2-1.1-3 3 .3 5.1 1.5 5.1 3v2h-4Z"/></svg>
+            <h3 class="voordeel__titel">U heeft met de bazen zelf te maken</h3>
+            <p class="panel__body">Martin en Mario voeren het gesprek, maken de planning en staan op de bouw. Er zit geen laag tussen.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--wit">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-1 3v6l5 3 1-1.7-4-2.3V7h-2Z"/></svg>
+            <h3 class="voordeel__titel">Een strakke planning</h3>
+            <p class="panel__body">U weet van tevoren wat u kunt verwachten en wanneer uw woning klaar is voor gebruik. Onze werktijden zijn flexibel.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--grey">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6.5c0 4.6 3.2 8.4 8 10.5 4.8-2.1 8-5.9 8-10.5V5l-8-3Zm0 2.2 6 2.2v5.1c0 3.5-2.3 6.5-6 8.3-3.7-1.8-6-4.8-6-8.3V6.4l6-2.2Z"/></svg>
+            <h3 class="voordeel__titel">Vaste partners, geen wisselende ploegen</h3>
+            <p class="panel__body">Dezelfde stukadoors, metselaars en elektriciens bij elk project. Het werk ligt daardoor niet stil en niemand loopt elkaar in de weg.</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel panel--wit">
+            <svg class="voordeel__icoon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 11h3v10h6v-6h2v6h6V11h3L12 3Zm0 2.6 6 4.8V19h-2v-6H8v6H6v-8.6l6-4.8Z"/></svg>
+            <h3 class="voordeel__titel">Bekend in Purmerend en omstreken</h3>
+            <p class="panel__body">Een familiebedrijf sinds 1935, inmiddels in de vierde generatie, met het werk vlak bij huis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block" id="s09-projectbewijs">
+    <div class="container">
+      <div class="content-block--container background--white" style="padding-bottom:var(--space-600)">
+        <div class="row">
+          <div class="col-md-8 col-12">
+            <span class="subtitle" style="margin-bottom:var(--space-500)">Uit de praktijk</span>
+            <h2 class="section-heading">Aanbouw, opbouw en verbouw</h2>
+            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">
+              Vier beelden uit de serie van 46 foto&rsquo;s die J. Boom van dit
+              soort werk publiceerde.
+            </p>
+            <div style="margin-top:var(--space-600)">
+              <a href="projecten-aanbouw-opbouw-verbouw.html" class="button button--secundair"><span class="button__inhoud">Bekijk de hele serie<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg></span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="galerij galerij--4">
+        <figure class="galerij__item">
+          <picture><source type="image/avif" srcset="assets/foto/jboom-aanbouw-01-420.avif 420w, assets/foto/jboom-aanbouw-01-640.avif 640w, assets/foto/jboom-aanbouw-01-800.avif 800w" sizes="(max-width: 767px) 50vw, 25vw"><img src="assets/foto/jboom-aanbouw-01-800.webp" srcset="assets/foto/jboom-aanbouw-01-420.webp 420w, assets/foto/jboom-aanbouw-01-640.webp 640w, assets/foto/jboom-aanbouw-01-800.webp 800w" sizes="(max-width: 767px) 50vw, 25vw" width="800" height="600" alt="Veranda met witte kruisregels en een zithoek langs de achtergevel" loading="lazy" fetchpriority="low" decoding="async"></picture>
+        </figure>
+        <figure class="galerij__item">
+          <picture><source type="image/avif" srcset="assets/foto/jboom-aanbouw-03-420.avif 420w, assets/foto/jboom-aanbouw-03-640.avif 640w, assets/foto/jboom-aanbouw-03-800.avif 800w" sizes="(max-width: 767px) 50vw, 25vw"><img src="assets/foto/jboom-aanbouw-03-800.webp" srcset="assets/foto/jboom-aanbouw-03-420.webp 420w, assets/foto/jboom-aanbouw-03-640.webp 640w, assets/foto/jboom-aanbouw-03-800.webp 800w" sizes="(max-width: 767px) 50vw, 25vw" width="800" height="600" alt="Uitbouw van binnenuit gezien, met tuindeuren naar de achtertuin" loading="lazy" fetchpriority="low" decoding="async"></picture>
+        </figure>
+        <figure class="galerij__item">
+          <picture><source type="image/avif" srcset="assets/foto/jboom-aanbouw-05-450.avif 450w" sizes="(max-width: 767px) 50vw, 25vw"><img src="assets/foto/jboom-aanbouw-05-450.webp" srcset="assets/foto/jboom-aanbouw-05-450.webp 450w" sizes="(max-width: 767px) 50vw, 25vw" width="450" height="600" alt="Serre gezien vanuit de achtertuin" loading="lazy" fetchpriority="low" decoding="async"></picture>
+        </figure>
+        <figure class="galerij__item">
+          <picture><source type="image/avif" srcset="assets/foto/jboom-aanbouw-07-420.avif 420w, assets/foto/jboom-aanbouw-07-640.avif 640w, assets/foto/jboom-aanbouw-07-800.avif 800w" sizes="(max-width: 767px) 50vw, 25vw"><img src="assets/foto/jboom-aanbouw-07-800.webp" srcset="assets/foto/jboom-aanbouw-07-420.webp 420w, assets/foto/jboom-aanbouw-07-640.webp 640w, assets/foto/jboom-aanbouw-07-800.webp 800w" sizes="(max-width: 767px) 50vw, 25vw" width="800" height="450" alt="Uitbouw aan de zijgevel, in grijze steen met een zijdeur" loading="lazy" fetchpriority="low" decoding="async"></picture>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band background--white" id="s10-faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <span class="subtitle">FAQ</span>
+          <h2 class="font-size--lg" style="margin-top:var(--space-500)">Wat mensen meestal nog vragen</h2>
+        </div>
+        <div class="col-md-8 col-12">
+          <div class="accordion">
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false" aria-controls="faq-10-0">
+              <span class="accordion__number">01</span>
+              <span class="accordion__title">Wat is het verschil tussen renovatie en verbouwing?</span>
+              <span class="accordion__suffix" aria-hidden="true"><span class="accordion__icon"></span></span>
+            </button>
+            <div class="accordion__details" id="faq-10-0">
+              <div class="accordion__details-inner article-body"><p>Bij renovatie vervangt of herstelt u wat er is en blijft de indeling in grote lijnen zoals hij was. Bij een verbouwing verandert de indeling of de constructie. In de praktijk lopen ze in elkaar over: een dak dat vervangen wordt is renovatie, maar een dakkapel erbij is verbouwing.</p></div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false" aria-controls="faq-10-1">
+              <span class="accordion__number">02</span>
+              <span class="accordion__title">Heb ik voor renovatie een vergunning nodig?</span>
+              <span class="accordion__suffix" aria-hidden="true"><span class="accordion__icon"></span></span>
+            </button>
+            <div class="accordion__details" id="faq-10-1">
+              <div class="accordion__details-inner article-body"><p>Gewoon onderhoud en het vervangen van onderdelen door gelijkwaardige is meestal vergunningvrij. Verandert het uiterlijk van de woning, of raakt het de constructie, dan kan het anders liggen &mdash; en bij een monument of in een beschermd stadsgezicht gelden aparte regels. De vergunningcheck van het Omgevingsloket is het startpunt.</p></div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false" aria-controls="faq-10-2">
+              <span class="accordion__number">03</span>
+              <span class="accordion__title">Kan ik onderdelen los laten doen?</span>
+              <span class="accordion__suffix" aria-hidden="true"><span class="accordion__icon"></span></span>
+            </button>
+            <div class="accordion__details" id="faq-10-2">
+              <div class="accordion__details-inner article-body"><p>Ja. We zetten de offerte per onderdeel op, zodat u kunt kiezen wat nu gebeurt en wat later. We geven daarbij aan welk werk beter in een keer kan, omdat het anders dubbel wordt gedaan.</p></div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false" aria-controls="faq-10-3">
+              <span class="accordion__number">04</span>
+              <span class="accordion__title">Is renovatie het moment om te isoleren?</span>
+              <span class="accordion__suffix" aria-hidden="true"><span class="accordion__icon"></span></span>
+            </button>
+            <div class="accordion__details" id="faq-10-3">
+              <div class="accordion__details-inner article-body"><p>Vaak wel. Als een dak of een gevel toch open moet, kost isoleren relatief weinig extra ten opzichte van een apart isolatieproject later. Vervangt u een constructieonderdeel, dan stelt het Besluit bouwwerken leefomgeving daar bovendien minimumeisen aan.</p></div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logo-slider" id="s11-partners" aria-label="Met wie wij samenwerken" data-logoband>
+    <div class="logo-slider__venster">
+      <div class="logo-slider__spoor">
+        <ul class="logo-slider__set">
+          <li class="logo-slider__logo"><span class="logo-slider__woord">EWP</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">Select Windows</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">Smit Heiwerken</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">De Heer Elektrotechniek</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">Sanders</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">Peter Helmich</span></li>
+        </ul>
+        <ul class="logo-slider__set" aria-hidden="true">
+          <li class="logo-slider__logo"><span class="logo-slider__woord">EWP</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">Select Windows</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">Smit Heiwerken</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">De Heer Elektrotechniek</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">Sanders</span></li>
+          <li class="logo-slider__logo"><span class="logo-slider__woord">Peter Helmich</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-slot" id="s12-contact">
+    <div class="container">
+      <div class="cta-slot__hoofd">
+        <span class="subtitle cta-slot__label">Contact</span>
+        <h2 class="cta-slot__kop">Uw woning laten opknappen?</h2>
+        <p class="cta-slot__tekst">Vertel kort wat u wilt bouwen of verbouwen. Wij nemen zo snel mogelijk contact met u op.</p>
+        <div class="cta-slot__actie">
+          <a href="offerte.html" class="button button--primary"><span class="button__inhoud">Vraag een offerte aan<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg></span></span></a>
+          <a href="tel:+31299433498" class="button button--secondary"><span class="button__inhoud">Bel 0299 - 43 34 98<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 4.6 20.6 12l-7.4 7.4-1.4-1.4 5-5H3.4v-2h13.4l-5-5 1.4-1.4Z"/></svg></span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer--widgets">
+      <div class="row footer--gap">
+        <div class="col-lg-3 col-md-4 col-12 widget">
+          <img src="assets/logo/jboom-logo.webp" alt="Aannemersbedrijf J. Boom v.o.f." width="134" height="40" style="margin-bottom:var(--space-500)">
+          <p class="footer--intro">Aanbouw, verbouw, dakkapellen en kunststof kozijnen voor particulieren en Verenigingen van Eigenaren. Een familiebedrijf uit Purmerend, sinds 1935.</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12 widget">
+          <h2 class="footer__kop">Diensten</h2>
+          <ul role="list">
+            <li><a href="aanbouw-en-uitbouw.html">Aanbouw en uitbouw</a></li>
+            <li><a href="deuren-en-puien.html">Deuren en puien</a></li>
+            <li><a href="verbouw.html">Verbouw</a></li>
+            <li><a href="dakopbouw-en-dakkapel.html">Dakopbouw en dakkapel</a></li>
+            <li><a href="renovatie.html">Renovatie</a></li>
+            <li><a href="nieuwbouw.html">Nieuwbouw</a></li>
+            <li><a href="bouwadvies.html">Bouwadvies en bouwtekening</a></li>
+            <li><a href="kunststof-kozijnen.html">Kunststof kozijnen en voorgevels</a></li>
+            <li><a href="gevelbekleding.html">Gevelbekleding</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12 widget">
+          <h2 class="footer__kop">Projecten</h2>
+          <ul role="list">
+            <li><a href="projecten-aanbouw-opbouw-verbouw.html">Aanbouw, opbouw en verbouw</a></li>
+            <li><a href="projecten-dakkapellen-gevels-kozijnen-deuren.html">Dakkapellen, gevels, kozijnen en deuren</a></li>
+            <li><a href="referenties.html">Klanten over J. Boom</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="historie.html">Historie</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12 widget">
+          <h2 class="footer__kop">Contact</h2>
+          <ul role="list">
+            <li><a href="tel:+31299433498">0299 - 43 34 98</a></li>
+            <li><a href="mailto:info@jboom.nl">info@jboom.nl</a></li>
+            <li><a href="https://www.facebook.com/AannemersbedrijfJ.Boom" rel="noopener">Facebook</a></li>
+          </ul>
+          <p class="footer--adres">Pascalstraat 24<br>1446 TX Purmerend<br>KvK 36019793</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer--line"></div>
+    <div class="footer--copyright">
+      <span>&copy; Aannemersbedrijf J. Boom v.o.f.</span>
+      <a href="privacybeleid.html">Privacybeleid</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="site.min.js?v=b877f78c"></script>
+<script src="contactformulier.min.js?v=7654b6f7"></script>
+
+</div><!-- /.content__wrapper -->
+</div><!-- /[data-barba=container] -->
+</div><!-- /[data-barba=wrapper] -->
+
+</div><!-- /#smooth-content -->
+</div><!-- /#smooth-wrapper -->
+
+<!-- ================= COOKIEMELDING ================= -->
+<aside id="cookiebalk" class="cookiebalk" hidden aria-label="Cookiemelding">
+  <h2>Cookie-instellingen</h2>
+  <p>Deze site plaatst alleen wat nodig is om hem te laten werken. Zet je analytische cookies aan, dan help je ons te zien wat werkt en wat niet. Lees het <a href="cookies.html">cookiebeleid</a>.</p>
+
+  <div id="cookieKeuzes" class="cookie-keuzes" hidden>
+    <div class="cookie-optie">
+      <label class="cookie-schakelaar">
+        <input type="checkbox" checked disabled aria-label="Functionele cookies, altijd aan">
+        <span aria-hidden="true"></span>
+      </label>
+      <div>
+        <span class="cookie-optie-naam">Functioneel</span>
+        <p>Nodig om de site te laten werken. Staat altijd aan.</p>
+      </div>
+    </div>
+    <div class="cookie-optie">
+      <label class="cookie-schakelaar">
+        <input type="checkbox" id="cookieAnalytisch" aria-label="Analytische cookies">
+        <span aria-hidden="true"></span>
+      </label>
+      <div>
+        <span class="cookie-optie-naam">Analytisch</span>
+        <p>Laat ons zien welke pagina&rsquo;s bezocht worden, zodat we de site kunnen verbeteren.</p>
+      </div>
+    </div>
+    <div class="cookie-optie">
+      <label class="cookie-schakelaar">
+        <input type="checkbox" id="cookieMarketing" aria-label="Marketingcookies">
+        <span aria-hidden="true"></span>
+      </label>
+      <div>
+        <span class="cookie-optie-naam">Marketing</span>
+        <p>Voor advertenties en het meten daarvan. Nu niet in gebruik.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cookie-knoppen">
+    <button type="button" class="cookie-knop" data-cookie="weigeren">Weigeren</button>
+    <button type="button" class="cookie-knop" data-cookie="aanpassen">Aanpassen</button>
+    <button type="button" class="cookie-knop cookie-knop--donker" data-cookie="toestaan">Toestaan</button>
+  </div>
+</aside>
+
+<!-- ================= PAGINA-OVERGANGEN =================
+     Barba wisselt alleen de container hierboven om, GSAP animeert de wissel. -->
+<!-- defer: de browser haalt ze op terwijl hij de pagina nog aan het ontleden is
+     en voert ze daarna uit, in deze volgorde. Die volgorde is nodig, want
+     ScrollTrigger heeft gsap nodig en page-transitions.js heeft Barba nodig. -->
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.3/dist/barba.umd.js"></script>
+<script defer src="cookiebalk.min.js?v=25fba6b2"></script>
+<script defer src="analytics.min.js?v=66593c4a"></script>
+<script defer src="smooth-scroll.min.js?v=8d68a741"></script>
+<script defer src="page-transitions.min.js?v=6a49085b"></script>
+
+</body>
+</html>

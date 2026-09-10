@@ -1,0 +1,1083 @@
+{
+ "jboom-bedrijfsbussen": {
+  "breed": 2000,
+  "hoog": 751,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   2000
+  ],
+  "alt": "Twee gele bedrijfsbussen van Aannemersbedrijf J. Boom op het terrein aan de Pascalstraat in Purmerend",
+  "bron": "AannemersbedrijfJ.Boom006.jpg"
+ },
+ "jboom-bedrijfsbus": {
+  "breed": 1920,
+  "hoog": 480,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Gele bedrijfsbus van Aannemersbedrijf J. Boom met het adres en telefoonnummer op de zijkant",
+  "bron": "AannemersbedrijfJ.Boom098.jpg"
+ },
+ "jboom-veranda-zonwering": {
+  "breed": 1920,
+  "hoog": 721,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Overkapping aan de achterzijde van een woning, met gele zonwering en uitzicht op de tuin",
+  "bron": "AannemersbedrijfJ.Boom002.jpg"
+ },
+ "jboom-aanbouw-in-uitvoering": {
+  "breed": 1920,
+  "hoog": 721,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Aanbouw in uitvoering: het houten kozijnwerk staat, de beglazing moet er nog in",
+  "bron": "AannemersbedrijfJ.Boom003.jpg"
+ },
+ "jboom-garage-aanbouw": {
+  "breed": 1920,
+  "hoog": 721,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Aangebouwde garage in bruine baksteen met een donkere sectionaaldeur en een zijdeur",
+  "bron": "AannemersbedrijfJ.Boom004.jpg"
+ },
+ "jboom-veranda-voorgevel": {
+  "breed": 1920,
+  "hoog": 721,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Witte veranda met kruisregels langs de voorgevel van een woning, met een zithoek eronder",
+  "bron": "AannemersbedrijfJ.Boom005.jpg"
+ },
+ "jboom-voorgevel-kozijnen": {
+  "breed": 1920,
+  "hoog": 723,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Voorgevel met een rode voordeur, witte kunststof kozijnen en twee plantenbakken",
+  "bron": "AannemersbedrijfJ.Boom007.jpg"
+ },
+ "jboom-dakopbouw-woning": {
+  "breed": 1920,
+  "hoog": 480,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Woning met een lichte dakopbouw over de volle breedte van de eerste verdieping",
+  "bron": "AannemersbedrijfJ.Boom009.jpg"
+ },
+ "jboom-dakkapel-band": {
+  "breed": 2000,
+  "hoog": 501,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   2000
+  ],
+  "alt": "Dakkapel met witte kozijnen op een bakstenen woning",
+  "bron": "AannemersbedrijfJ.Boom013.jpg"
+ },
+ "jboom-voordeur-gevel": {
+  "breed": 1920,
+  "hoog": 481,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Bakstenen gevel met een zwarte voordeur met glas-in-lood en een buitenlantaarn",
+  "bron": "AannemersbedrijfJ.Boom016.jpg"
+ },
+ "jboom-dakkapel-raampartij": {
+  "breed": 1920,
+  "hoog": 481,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Dakkapel met een doorlopende raampartij op een pannendak",
+  "bron": "AannemersbedrijfJ.Boom017.jpg"
+ },
+ "jboom-aanbouw-schuifpui": {
+  "breed": 1920,
+  "hoog": 480,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280,
+   1600,
+   1920
+  ],
+  "alt": "Aanbouw met een schuifpui en gele knikarmzonwering aan de tuinzijde",
+  "bron": "AannemersbedrijfJ.Boom051.jpg"
+ },
+ "jboom-historie": {
+  "breed": 436,
+  "hoog": 284,
+  "breedtes": [
+   436
+  ],
+  "alt": "Zwart-witfoto uit het familiearchief: metselaars van J. Boom aan het werk op een bouwplaats",
+  "bron": "AannemersbedrijfJ.Boom008.jpg"
+ },
+ "jboom-uitbouw-interieur": {
+  "breed": 464,
+  "hoog": 290,
+  "breedtes": [
+   464
+  ],
+  "alt": "Uitbouw van binnenuit gezien, met een raampartij over de volle breedte naar de tuin",
+  "bron": "AannemersbedrijfJ.Boom010.jpg"
+ },
+ "jboom-dakkapel-kaart": {
+  "breed": 436,
+  "hoog": 273,
+  "breedtes": [
+   436
+  ],
+  "alt": "Dakkapel met donkere kozijnen op een geel-bakstenen woning",
+  "bron": "AannemersbedrijfJ.Boom011.jpg"
+ },
+ "jboom-kunststof-pui": {
+  "breed": 436,
+  "hoog": 273,
+  "breedtes": [
+   436
+  ],
+  "alt": "Witte kunststof tuindeuren met roedeverdeling in een bakstenen achtergevel",
+  "bron": "AannemersbedrijfJ.Boom012.jpg"
+ },
+ "jboom-garage-kaart": {
+  "breed": 436,
+  "hoog": 335,
+  "breedtes": [
+   436
+  ],
+  "alt": "Aangebouwde garage met een donkere sectionaaldeur en een bestrate oprit",
+  "bron": "AannemersbedrijfJ.Boom014.jpg"
+ },
+ "jboom-dakopbouw-kaart": {
+  "breed": 436,
+  "hoog": 335,
+  "breedtes": [
+   436
+  ],
+  "alt": "Dakopbouw met rolluiken op de bovenverdieping van een tussenwoning",
+  "bron": "AannemersbedrijfJ.Boom015.jpg"
+ },
+ "jboom-sloopwerk": {
+  "breed": 384,
+  "hoog": 563,
+  "breedtes": [
+   384
+  ],
+  "alt": "Timmerman met gehoorbescherming en stofmasker breekt een binnenmuur weg, met een stofzuiger ernaast",
+  "bron": "AannemersbedrijfJ.Boom099.jpg"
+ },
+ "jboom-aanbouw-01": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Veranda met witte kruisregels en een zithoek langs de achtergevel",
+  "bron": "AannemersbedrijfJ.Boom052.jpg"
+ },
+ "jboom-aanbouw-02": {
+  "breed": 800,
+  "hoog": 598,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Uitbouw in baksteen naast de entree van een woning",
+  "bron": "AannemersbedrijfJ.Boom053.jpg"
+ },
+ "jboom-aanbouw-03": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Uitbouw van binnenuit gezien, met tuindeuren naar de achtertuin",
+  "bron": "AannemersbedrijfJ.Boom054.jpg"
+ },
+ "jboom-aanbouw-04": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Serre-uitbouw gezien vanuit de woonkamer, met openslaande deuren",
+  "bron": "AannemersbedrijfJ.Boom055.jpg"
+ },
+ "jboom-aanbouw-05": {
+  "breed": 450,
+  "hoog": 600,
+  "breedtes": [
+   450
+  ],
+  "alt": "Serre gezien vanuit de achtertuin",
+  "bron": "AannemersbedrijfJ.Boom056.jpg"
+ },
+ "jboom-aanbouw-06": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Uitbouw aan de zijkant van een woning, in rode baksteen",
+  "bron": "AannemersbedrijfJ.Boom057.jpg"
+ },
+ "jboom-aanbouw-07": {
+  "breed": 800,
+  "hoog": 450,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Uitbouw aan de zijgevel, in grijze steen met een zijdeur",
+  "bron": "AannemersbedrijfJ.Boom058.jpg"
+ },
+ "jboom-aanbouw-08": {
+  "breed": 800,
+  "hoog": 613,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Aangebouwde garage met een sectionaaldeur en een plat dak",
+  "bron": "AannemersbedrijfJ.Boom059.jpg"
+ },
+ "jboom-aanbouw-09": {
+  "breed": 1024,
+  "hoog": 768,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024
+  ],
+  "alt": "Lichtstraat op het platte dak van een uitbouw",
+  "bron": "AannemersbedrijfJ.Boom060.jpg"
+ },
+ "jboom-aanbouw-10": {
+  "breed": 450,
+  "hoog": 600,
+  "breedtes": [
+   450
+  ],
+  "alt": "Uitbouw aan de zijkant van een woning met houten gevelbekleding",
+  "bron": "AannemersbedrijfJ.Boom061.jpg"
+ },
+ "jboom-aanbouw-11": {
+  "breed": 800,
+  "hoog": 402,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Aangebouwde schuur naast een woning",
+  "bron": "AannemersbedrijfJ.Boom062.jpg"
+ },
+ "jboom-aanbouw-12": {
+  "breed": 800,
+  "hoog": 450,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Aangebouwde garage in bruine baksteen met een donkere sectionaaldeur",
+  "bron": "AannemersbedrijfJ.Boom063.jpg"
+ },
+ "jboom-aanbouw-13": {
+  "breed": 1024,
+  "hoog": 768,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024
+  ],
+  "alt": "Uitbouw aan de achterkant van een woning, van binnenuit gezien",
+  "bron": "AannemersbedrijfJ.Boom064.jpg"
+ },
+ "jboom-aanbouw-14": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Serre-uitbouw met een grote raampartij naar de tuin",
+  "bron": "AannemersbedrijfJ.Boom065.jpg"
+ },
+ "jboom-aanbouw-15": {
+  "breed": 1024,
+  "hoog": 765,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024
+  ],
+  "alt": "Raampartij over de volle breedte van een uitbouw",
+  "bron": "AannemersbedrijfJ.Boom066.jpg"
+ },
+ "jboom-aanbouw-16": {
+  "breed": 800,
+  "hoog": 598,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Uitbouw in grijze steen met een luifel erboven",
+  "bron": "AannemersbedrijfJ.Boom067.jpg"
+ },
+ "jboom-aanbouw-17": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Uitbouw in gele steen met een luifel en zonwering",
+  "bron": "AannemersbedrijfJ.Boom068.jpg"
+ },
+ "jboom-aanbouw-18": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Uitbouw met een doorlopende raampartij aan de tuinzijde",
+  "bron": "AannemersbedrijfJ.Boom069.jpg"
+ },
+ "jboom-aanbouw-19": {
+  "breed": 450,
+  "hoog": 600,
+  "breedtes": [
+   450
+  ],
+  "alt": "Uitbouw bij de entree van een woning",
+  "bron": "AannemersbedrijfJ.Boom070.jpg"
+ },
+ "jboom-aanbouw-20": {
+  "breed": 450,
+  "hoog": 600,
+  "breedtes": [
+   450
+  ],
+  "alt": "Uitbouw aan de voorkant van een woning, met bloembakken ervoor",
+  "bron": "AannemersbedrijfJ.Boom071.jpg"
+ },
+ "jboom-aanbouw-21": {
+  "breed": 800,
+  "hoog": 599,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Opbouw boven de eerste verdieping van een woning",
+  "bron": "AannemersbedrijfJ.Boom072.jpg"
+ },
+ "jboom-aanbouw-22": {
+  "breed": 800,
+  "hoog": 599,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Woning met een dakkapel en een uitgebouwde entree",
+  "bron": "AannemersbedrijfJ.Boom073.jpg"
+ },
+ "jboom-aanbouw-23": {
+  "breed": 800,
+  "hoog": 599,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Dakopbouw over de volle breedte van een woning",
+  "bron": "AannemersbedrijfJ.Boom074.jpg"
+ },
+ "jboom-aanbouw-24": {
+  "breed": 800,
+  "hoog": 599,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Extra verdieping met houten gevelbekleding op een bestaande woning",
+  "bron": "AannemersbedrijfJ.Boom075.jpg"
+ },
+ "jboom-aanbouw-25": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Vergrote achtergevel na de verbouwing",
+  "bron": "AannemersbedrijfJ.Boom076.jpg"
+ },
+ "jboom-aanbouw-26": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Dakkapel over vrijwel het hele dakvlak van een woning",
+  "bron": "AannemersbedrijfJ.Boom077.jpg"
+ },
+ "jboom-aanbouw-27": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Extra verdieping op een bestaande woning",
+  "bron": "AannemersbedrijfJ.Boom078.jpg"
+ },
+ "jboom-aanbouw-28": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Vernieuwde achtergevel met openslaande deuren naar de tuin",
+  "bron": "AannemersbedrijfJ.Boom079.jpg"
+ },
+ "jboom-aanbouw-29": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Witte dakkapel op een pannendak",
+  "bron": "AannemersbedrijfJ.Boom080.jpg"
+ },
+ "jboom-aanbouw-30": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Verbouwde woning met houten gevelbekleding",
+  "bron": "AannemersbedrijfJ.Boom081.jpg"
+ },
+ "jboom-aanbouw-31": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Verbouwde woning met een geel-bakstenen gevel en nieuwe kozijnen",
+  "bron": "AannemersbedrijfJ.Boom082.jpg"
+ },
+ "jboom-aanbouw-32": {
+  "breed": 800,
+  "hoog": 675,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Woning die aan de achterzijde is vergroot",
+  "bron": "AannemersbedrijfJ.Boom083.jpg"
+ },
+ "jboom-aanbouw-33": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Overkapping met een jacuzzi eronder",
+  "bron": "AannemersbedrijfJ.Boom084.jpg"
+ },
+ "jboom-aanbouw-34": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Vrijstaande overkapping in de tuin",
+  "bron": "AannemersbedrijfJ.Boom085.jpg"
+ },
+ "jboom-aanbouw-35": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Houten opstap naar een verhoogd geplaatste jacuzzi",
+  "bron": "AannemersbedrijfJ.Boom086.jpg"
+ },
+ "jboom-aanbouw-36": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Dakkapel bovenop een woning, gezien vanaf de tuinzijde",
+  "bron": "AannemersbedrijfJ.Boom087.jpg"
+ },
+ "jboom-aanbouw-37": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Veranda met witte kruisregels langs de achtergevel",
+  "bron": "AannemersbedrijfJ.Boom088.jpg"
+ },
+ "jboom-aanbouw-38": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Veranda met een houten tafel en stoelen eronder",
+  "bron": "AannemersbedrijfJ.Boom089.jpg"
+ },
+ "jboom-aanbouw-39": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Ingebouwde sauna met houten banken",
+  "bron": "AannemersbedrijfJ.Boom090.jpg"
+ },
+ "jboom-aanbouw-40": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Vernieuwd toilet met donkere wandtegels",
+  "bron": "AannemersbedrijfJ.Boom091.jpg"
+ },
+ "jboom-aanbouw-41": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Plaatsing van een zwarte dakkapel op een pannendak",
+  "bron": "AannemersbedrijfJ.Boom092.jpg"
+ },
+ "jboom-aanbouw-42": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Zwarte dakkapel na plaatsing, gezien vanaf de straat",
+  "bron": "AannemersbedrijfJ.Boom093.jpg"
+ },
+ "jboom-aanbouw-43": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Houtwerk als wandafwerking na de verbouwing",
+  "bron": "AannemersbedrijfJ.Boom094.jpg"
+ },
+ "jboom-aanbouw-44": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Nieuw dakvlak met zwarte dakpannen en een dakkapel",
+  "bron": "AannemersbedrijfJ.Boom095.jpg"
+ },
+ "jboom-aanbouw-45": {
+  "breed": 800,
+  "hoog": 340,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Dakkapel van binnenuit gezien, in een afgewerkte zolderkamer",
+  "bron": "AannemersbedrijfJ.Boom096.jpg"
+ },
+ "jboom-aanbouw-46": {
+  "breed": 800,
+  "hoog": 262,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Vergrote kamer onder het dak, met daglicht uit de dakkapel",
+  "bron": "AannemersbedrijfJ.Boom097.jpg"
+ },
+ "jboom-dakkapel-01": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Witte dakkapel op het dakvlak van een woning",
+  "bron": "AannemersbedrijfJ.Boom018.jpg"
+ },
+ "jboom-dakkapel-02": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Zwarte dakkapel op een woning met een oranje bakstenen gevel",
+  "bron": "AannemersbedrijfJ.Boom019.jpg"
+ },
+ "jboom-dakkapel-03": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Brede zwarte dakkapel op het achterdakvlak van een woning",
+  "bron": "AannemersbedrijfJ.Boom020.jpg"
+ },
+ "jboom-dakkapel-04": {
+  "breed": 800,
+  "hoog": 454,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Dakkapel van binnenuit gezien, met daglicht over de volle breedte van de zolder",
+  "bron": "AannemersbedrijfJ.Boom021.jpg"
+ },
+ "jboom-dakkapel-05": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Ruime zolderkamer met daglicht uit een brede dakkapel",
+  "bron": "AannemersbedrijfJ.Boom022.jpg"
+ },
+ "jboom-dakkapel-06": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Zwarte dakkapel op een lichte woning",
+  "bron": "AannemersbedrijfJ.Boom023.jpg"
+ },
+ "jboom-dakkapel-07": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Zolderkamer met een dakkapel en zicht naar buiten",
+  "bron": "AannemersbedrijfJ.Boom024.jpg"
+ },
+ "jboom-dakkapel-08": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Witte dakkapel op een bruin pannendak",
+  "bron": "AannemersbedrijfJ.Boom025.jpg"
+ },
+ "jboom-dakkapel-09": {
+  "breed": 800,
+  "hoog": 530,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Dakkapel met rode kozijnen op een rood pannendak",
+  "bron": "AannemersbedrijfJ.Boom026.jpg"
+ },
+ "jboom-dakkapel-10": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Zolderverdieping met een dakkapel aan de voorzijde",
+  "bron": "AannemersbedrijfJ.Boom027.jpg"
+ },
+ "jboom-dakkapel-11": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Nieuw geplaatste zwarte voordeur met glas-in-lood",
+  "bron": "AannemersbedrijfJ.Boom028.jpg"
+ },
+ "jboom-dakkapel-12": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Nieuw geplaatste rode voordeur met plantenbakken ernaast",
+  "bron": "AannemersbedrijfJ.Boom029.jpg"
+ },
+ "jboom-dakkapel-13": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Dakkapellen op de eerste verdieping van een woning",
+  "bron": "AannemersbedrijfJ.Boom030.jpg"
+ },
+ "jboom-dakkapel-14": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Zwarte kunststof voordeur met een lange greep",
+  "bron": "AannemersbedrijfJ.Boom031.jpg"
+ },
+ "jboom-dakkapel-15": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Zwarte voordeur met zijlicht in een bakstenen gevel",
+  "bron": "AannemersbedrijfJ.Boom032.jpg"
+ },
+ "jboom-dakkapel-16": {
+  "breed": 598,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   598
+  ],
+  "alt": "Lichtblauwe voordeur met glaspaneel, met bomen in potten ernaast",
+  "bron": "AannemersbedrijfJ.Boom033.jpg"
+ },
+ "jboom-dakkapel-17": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Plaatsing van een lichte voordeur met bovenlicht",
+  "bron": "AannemersbedrijfJ.Boom034.jpg"
+ },
+ "jboom-dakkapel-18": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Witte voordeur met halfrond bovenlicht",
+  "bron": "AannemersbedrijfJ.Boom035.jpg"
+ },
+ "jboom-dakkapel-19": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Witte voordeur met roedeverdeling in een bruine bakstenen gevel",
+  "bron": "AannemersbedrijfJ.Boom036.jpg"
+ },
+ "jboom-dakkapel-20": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Moderne antracietkleurige voordeur met een verticale greep",
+  "bron": "AannemersbedrijfJ.Boom037.jpg"
+ },
+ "jboom-dakkapel-21": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Donkergroene voordeur met twee smalle glasstroken",
+  "bron": "AannemersbedrijfJ.Boom038.jpg"
+ },
+ "jboom-dakkapel-22": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Klassieke houten voordeur met glas-in-lood",
+  "bron": "AannemersbedrijfJ.Boom039.jpg"
+ },
+ "jboom-dakkapel-23": {
+  "breed": 1024,
+  "hoog": 768,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024
+  ],
+  "alt": "Moderne witte kunststof voordeur met vierkante glasvlakken",
+  "bron": "AannemersbedrijfJ.Boom040.jpg"
+ },
+ "jboom-dakkapel-24": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Witte kunststof voordeur met een lange greep",
+  "bron": "AannemersbedrijfJ.Boom041.jpg"
+ },
+ "jboom-dakkapel-25": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Donkergroene voordeur met glasstroken in een geel-bakstenen gevel",
+  "bron": "AannemersbedrijfJ.Boom042.jpg"
+ },
+ "jboom-dakkapel-26": {
+  "breed": 598,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   598
+  ],
+  "alt": "Witte voordeur met vier vierkante glasvlakken",
+  "bron": "AannemersbedrijfJ.Boom043.jpg"
+ },
+ "jboom-dakkapel-27": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Rode voordeur met glasvlakken en een lange greep",
+  "bron": "AannemersbedrijfJ.Boom044.jpg"
+ },
+ "jboom-dakkapel-28": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Antracietkleurige voordeur met een doorlopende greep, in een witte gevel",
+  "bron": "AannemersbedrijfJ.Boom045.jpg"
+ },
+ "jboom-dakkapel-29": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Zwarte voordeur met een groot glasvlak in een bakstenen gevel",
+  "bron": "AannemersbedrijfJ.Boom046.jpg"
+ },
+ "jboom-dakkapel-30": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Houtkleurige voordeur met een gebogen glasvlak",
+  "bron": "AannemersbedrijfJ.Boom047.jpg"
+ },
+ "jboom-dakkapel-31": {
+  "breed": 600,
+  "hoog": 800,
+  "breedtes": [
+   420,
+   600
+  ],
+  "alt": "Witte voordeur met een verticale glasstrook naast de entree",
+  "bron": "AannemersbedrijfJ.Boom048.jpg"
+ },
+ "jboom-dakkapel-32": {
+  "breed": 800,
+  "hoog": 600,
+  "breedtes": [
+   420,
+   640,
+   800
+  ],
+  "alt": "Zwarte tuindeuren met grote glasvlakken en een gordijn erachter",
+  "bron": "AannemersbedrijfJ.Boom049.jpg"
+ },
+ "jboom-dakkapel-33": {
+  "breed": 1024,
+  "hoog": 768,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024
+  ],
+  "alt": "Witte dakkapel met zwarte kozijnen op een pannendak",
+  "bron": "AannemersbedrijfJ.Boom050.jpg"
+ }
+}

@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Tijdelijke bestanden van maak_patroon.py / maak_assets.py
+_generator/**/_tmp-*
+
+# De aangeleverde herofilm in zijn originele vorm (5,6 MB stockmateriaal).
+#
+# Deze repo is publiek. Het gebruiken van stockmateriaal in een eindproduct is
+# waar een stocklicentie voor is, en de versie die de site laadt
+# (assets/video/jboom-hero-1280.mp4) staat er dus wel in. Maar het ORIGINELE
+# bestand opnieuw publiek verspreiden is precies wat vrijwel elke stocklicentie
+# verbiedt, dus dat blijft hier buiten.
+#
+# Er gaat niets kapot: het bestand is alleen nodig als je opnieuw wilt
+# encoderen met _generator/maak_herovideo.py. Wie dat wil, zet het originele
+# bestand terug als _generator/jboom/video/hero-bron.mp4.
+_generator/jboom/video/hero-bron.mp4
