@@ -6,14 +6,23 @@
 
     jboom/video/hero-bron.mp4  ->  assets/video/jboom-hero-1280.mp4
 
-Er komt géén posterframe uit dit script, en er ligt ook geen foto onder de film:
-de hero laat op verzoek alleen de film zien.
+Er komt ook een stilstaand beeld uit: het EERSTE beeldje van de film, dat in de
+hero onder de film ligt.
 
-Speelt de film niet -- `prefers-reduced-motion`, databesparing, een 2g-lijn of
-geen JavaScript, want dan hangt site.js hem niet in -- dan valt de hero terug op
-het antraciet uit `.hero` (#1A171B). Dat is de beste van de mogelijkheden:
-witte tekst haalt daar 17,76:1. Een posterframe zou dat vervangen door een
-still uit dezelfde stockfilm, die dan ook nog opgehaald moet worden.
+    jboom/video/hero-eerste-beeld.png  ->  assets/foto/jboom-hero-stilstaand-*
+
+Dat beeld moet er liggen. Speelt de film niet -- `prefers-reduced-motion`,
+Save-Data of geen JavaScript, want dan hangt site.js hem niet in -- dan zag je
+daarvoor het antraciet uit `.hero` en was de hero een zwart vlak. Nu zie je
+hetzelfde beeld, alleen stil. Omdat het het eerste beeldje is, is er geen sprong
+op het moment dat de film erin vervaagt.
+
+Niet als `poster`-attribuut op het video-element: `.hero--video` staat op
+opacity 0 tot de film echt loopt, dus een poster zou net zo onzichtbaar zijn als
+de film zelf. Vandaar een echte <img> eronder.
+
+Het beeld is gedeclareerd in beeldplan.json (sleutel `jboom-hero-stilstaand`,
+met een `bronpad`), dus `maak_assets.py` bouwt de ladder voortaan zelf mee.
 
 DE FILM IS GEEN OPNAME VAN J. BOOM
 Aangeleverd als `hero-logistiek_20260910102219.mp4` (10 september 2026) en
@@ -52,6 +61,7 @@ import sys
 HIER = pathlib.Path(__file__).resolve().parent
 BRON = HIER / 'jboom' / 'video' / 'hero-bron.mp4'
 UIT = HIER.parent / 'assets' / 'video' / 'jboom-hero-1280.mp4'
+STIL = HIER / 'jboom' / 'video' / 'hero-eerste-beeld.png'
 
 
 def main():
@@ -61,6 +71,14 @@ def main():
         sys.exit(f'Bronfilm ontbreekt: {BRON}')
 
     UIT.parent.mkdir(parents=True, exist_ok=True)
+
+    # Het eerste beeldje, voor het stilstaande beeld onder de film. De ladder
+    # eromheen maakt maak_assets.py, via de "bronpad" in beeldplan.json.
+    subprocess.run(['ffmpeg', '-v', 'error', '-i', str(BRON),
+                    '-vframes', '1', '-q:v', '1', '-y', str(STIL)], check=True)
+    print(f'  {STIL.name:34s} eerste beeldje ({STIL.stat().st_size/1024:.0f} kB)')
+    print('  -> draai maak_assets.py voor de webp/avif-ladder')
+
     subprocess.run([
         'ffmpeg', '-v', 'error', '-i', str(BRON),
         '-an',

@@ -296,7 +296,27 @@
   container.querySelectorAll('[data-herovideo]').forEach((video) => {
     if (kalm.matches) return;                                   // beweging uit
     if (navigator.connection?.saveData) return;                 // databesparing aan
-    if (/^(slow-)?2g$/.test(navigator.connection?.effectiveType || '')) return;  // trage lijn
+
+    /* Hier stond ook een derde regel:
+
+         if (/^(slow-)?2g$/.test(navigator.connection?.effectiveType || '')) return;
+
+       die is eruit, en dat is een bewuste keuze na een meting. Op deze machine
+       meldt navigator.connection effectiveType "slow-2g" met downlink 0,15
+       Mbit/s en rtt 2450 ms, terwijl datzelfde videobestand van 1,4 MB er in
+       12 ms binnenkomt -- gemeten 954 Mbit/s. effectiveType is een schatting
+       uit recente netwerkactiviteit en zit er dus grof naast; downlink komt uit
+       dezelfde schatting en helpt niet als tweede toets.
+
+       Wat die regel deed was daarom niet "sparen op een trage lijn" maar "de
+       hero weghalen bij wie de schatting verkeerd uitvalt", en omdat het
+       stilstaande beeld eronder er even niet lag, bleef er een zwart vlak over.
+
+       Wat blijft zijn de twee signalen die de bezoeker zelf afgeeft:
+       prefers-reduced-motion en Save-Data. Die zijn expliciet en betrouwbaar.
+       Voor de rest is de film 1,4 MB met preload="none", dus er wordt niets
+       opgehaald tot hier wordt besloten hem te laden, en wie hem niet krijgt
+       ziet het stilstaande beeld en niet een leeg vlak. */
 
     const bron = document.createElement('source');
     bron.src = video.dataset.herovideo;

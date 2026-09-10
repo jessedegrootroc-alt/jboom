@@ -99,9 +99,20 @@ def maak_fotos(plan):
     for sleutel, r in plan.items():
         if sleutel.startswith('_'):
             continue
-        bronpad = next(BRON.glob(f'*{r["bron"]}.*'), None)
-        if bronpad is None:
-            sys.exit(f'{sleutel}: bronbestand met nummer {r["bron"]} niet gevonden in {BRON}')
+        # Bijna elk beeld komt uit de export van www.jboom.nl en wordt op zijn
+        # bestandsnummer gevonden. Eén beeld komt daar niet uit: het stilstaande
+        # beeld onder de herofilm, dat uit de film zelf wordt gehaald. Dat staat
+        # als "bronpad" in het plan, met een pad vanaf _generator/, zodat ook dat
+        # beeld op één plek gedeclareerd staat en beeldmaten.json volledig blijft
+        # als dit script opnieuw draait.
+        if r.get('bronpad'):
+            bronpad = HIER / r['bronpad']
+            if not bronpad.exists():
+                sys.exit(f'{sleutel}: bronbestand {bronpad} bestaat niet')
+        else:
+            bronpad = next(BRON.glob(f'*{r["bron"]}.*'), None)
+            if bronpad is None:
+                sys.exit(f'{sleutel}: bronbestand met nummer {r["bron"]} niet gevonden in {BRON}')
         im = Image.open(bronpad).convert('RGB')
         breedtes = ladder(im.width)
         hoogte = None

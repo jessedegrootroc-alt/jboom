@@ -1079,5 +1079,18 @@
   ],
   "alt": "Witte dakkapel met zwarte kozijnen op een pannendak",
   "bron": "AannemersbedrijfJ.Boom050.jpg"
+ },
+ "jboom-hero-stilstaand": {
+  "breed": 1280,
+  "hoog": 720,
+  "breedtes": [
+   420,
+   640,
+   800,
+   1024,
+   1280
+  ],
+  "alt": "",
+  "bron": "hero-eerste-beeld.png"
  }
 }

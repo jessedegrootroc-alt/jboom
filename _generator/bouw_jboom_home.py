@@ -72,12 +72,12 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE =================
        Alleen de film als achtergrond, geen foto eronder. De foto van de gele
        bedrijfsbussen die hier stond is er op verzoek uit.
 
-       Wat de bezoeker ziet als de film NIET speelt: het antraciet uit
-       .hero (background-color: var(--color-groen), #1A171B). Dat is geen
-       gebrek maar de beste van de drie: witte tekst haalt daar 17,76:1, waar
-       ze op de gele bus 1,04:1 haalde. Het gebeurt bij
-       prefers-reduced-motion, bij databesparing, op een 2g-lijn en zonder
-       JavaScript -- site.js hangt de film dan niet in.
+       Onder de film ligt het eerste beeldje van diezelfde film als stilstaand
+       beeld. Dat moet er liggen: speelt de film niet -- prefers-reduced-motion,
+       databesparing, een echt trage lijn of geen JavaScript -- dan zag je
+       daarvoor het antraciet van .hero en was de hero dus een zwart vlak.
+       Nu zie je hetzelfde beeld, alleen stil. Omdat het het eerste beeldje is,
+       is er geen sprong op het moment dat de film erin vervaagt.
 
        De film is stockmateriaal en geen opname van J. Boom: een grijze bus, een
        monteur die een kozijn stelt, een woning met een dakkapel. Het werk in
@@ -85,11 +85,16 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE =================
        is het beeld decoratief (aria-hidden) en draagt de film geen enkele
        bewering; wat de hero beweert staat in de kop en de lead.
 
-       Geen src en geen poster: site.js hangt de bron zelf in, en een poster zou
-       een still van dezelfde stockfilm zijn die dan óók opgehaald wordt.
+       Geen src en geen poster op het video-element: site.js hangt de bron zelf
+       in, en een poster zou hier niets doen -- .hero--video staat op opacity 0
+       tot de film echt loopt, dus een poster zou net zo onzichtbaar zijn als de
+       film. Vandaar een echt img-element eronder en niet het poster-attribuut.
+       (Geen tagnotatie in dit commentaar: eindcontrole.py leest de ruwe HTML en
+       ziet zo'n voorbeeld anders als een afbeelding zonder alt.)
        Zie _generator/maak_herovideo.py. -->
   <section class="hero" id="s01-introductie" data-header-theme="light">
     <div class="hero--beeld" aria-hidden="true">
+      {foto("jboom-hero-stilstaand", laden="eager", maten="100vw", alt="")}
       <video class="hero--video" data-herovideo="assets/video/jboom-hero-1280.mp4"
              muted loop playsinline preload="none" tabindex="-1"></video>
       <span class="hero--sluier"></span>

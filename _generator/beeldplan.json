@@ -505,5 +505,11 @@
   "bron": "050",
   "rol": "galerij",
   "alt": "Witte dakkapel met zwarte kozijnen op een pannendak"
+ },
+ "jboom-hero-stilstaand": {
+  "bronpad": "jboom/video/hero-eerste-beeld.png",
+  "rol": "band",
+  "alt": "",
+  "herkomst": "Eerste beeldje van de aangeleverde herofilm (stockmateriaal, 10 september 2026). Geen opname van J. Boom; het beeld is decoratief en staat in de hero met alt=\"\". Zie _generator/maak_herovideo.py."
  }
 }
