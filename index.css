@@ -15,13 +15,21 @@
 .hero--beeld { position: absolute; inset: 0; overflow: hidden; }
 .hero--beeld img,
 .hero--video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-/* De film staat op nul en vervaagt erin zodra hij echt loopt. Weigert de browser
-   het automatisch afspelen -- en site.js hangt hem helemaal niet in bij
-   prefers-reduced-motion, databesparing of een 2g-lijn -- dan blijft dit op nul
-   staan en ziet de bezoeker het antraciet van .hero eronder. Witte tekst haalt
-   daar 17,76:1, dus dat is de leesbaarste van alle varianten. */
-.hero--video { opacity: 0; transition: opacity var(--duration-image) var(--ease-standard); }
-.hero--video.is-zichtbaar { opacity: 1; }
+/* De film is ALTIJD zichtbaar; het stilstaande beeld ligt erboven en vervaagt
+   weg zodra de film loopt. Niet omgekeerd, en dat is een bewuste keuze.
+
+   Hiervoor stond de film op opacity 0 en kwam hij pas in beeld bij het
+   'playing'-event. Dat werkt in Chromium, maar Safari weigert een film te
+   spelen die niet zichtbaar is en stopt hem ook weer als hij uit beeld raakt.
+   Een film die moet spelen om zichtbaar te worden en zichtbaar moet zijn om te
+   spelen, komt daar dus in een impasse. Nu staat de film gewoon aan en is het
+   beeld erboven het enige dat beweegt.
+
+   In de HTML staat de film daarom voor het beeld: beide zijn absoluut
+   gepositioneerd zonder z-index, dus wat later komt ligt erboven. */
+.hero--video { opacity: 1; }
+.hero--beeld picture img { opacity: 1; transition: opacity var(--duration-image) var(--ease-standard); }
+.hero--video.is-zichtbaar ~ picture img { opacity: 0; }
 
 /* De sluier over het beeld, op 25% (op verzoek, 10 september 2026).
    Hij was er eerst niet, daarna op 82-86%, en dat maakte de film bijna zwart.

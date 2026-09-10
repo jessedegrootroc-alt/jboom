@@ -318,13 +318,38 @@
        opgehaald tot hier wordt besloten hem te laden, en wie hem niet krijgt
        ziet het stilstaande beeld en niet een leeg vlak. */
 
+    /* muted en playsInline staan als attribuut in de HTML, maar Safari kijkt
+       naar de property. Zonder deze twee regels weigert het daar het
+       automatisch afspelen, ook al staat het attribuut er wel. */
+    video.muted = true;
+    video.playsInline = true;
+
     const bron = document.createElement('source');
     bron.src = video.dataset.herovideo;
     bron.type = 'video/mp4';
     video.appendChild(bron);
     video.addEventListener('playing', () => video.classList.add('is-zichtbaar'), { once: true });
+
+    /* Niet één play() maar een paar pogingen, en ook zodra er data is.
+       Reden: met preload="none" is er op het moment van load() nog niets
+       gebufferd, en Safari wijst een play() die daar direct op volgt af. De
+       afwijzing kwam in de vorige versie in een lege catch terecht, dus bleef
+       het stil zonder dat iemand het merkte. Chromium start wel meteen, dus dit
+       viel hier niet op.
+
+       Zes pogingen is de bovengrens; daarna houdt het op. Weigert de browser
+       structureel -- de energiespaarstand van iOS, of Safari's autoplay-
+       instelling per site -- dan blijft het stilstaande beeld liggen en is er
+       niets kapot. Dat is de bedoeling: dat is een keuze van de bezoeker. */
+    let pogingen = 0;
+    const probeerTeSpelen = () => {
+      if (!video.paused || !video.isConnected || pogingen++ > 5) return;
+      video.play().catch(() => {});
+    };
+    video.addEventListener('loadeddata', probeerTeSpelen);
+    video.addEventListener('canplay', probeerTeSpelen);
     video.load();
-    video.play().catch(() => {});
+    probeerTeSpelen();
 
     /* Op een telefoon zet de browser de film stil zodra je naar een andere app
        of een ander tabblad gaat, en niet elke browser zet hem weer aan als je
@@ -334,7 +359,8 @@
        deze pagina via het signaal. */
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible' && video.paused && video.isConnected) {
-        video.play().catch(() => {});
+        pogingen = 0;              // terugkomst is een nieuwe kans, niet een zesde poging
+        probeerTeSpelen();
       }
     }, { signal: window.__jboomVast?.signal });
   });

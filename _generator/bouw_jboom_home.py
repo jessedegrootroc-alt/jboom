@@ -72,12 +72,21 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE =================
        Alleen de film als achtergrond, geen foto eronder. De foto van de gele
        bedrijfsbussen die hier stond is er op verzoek uit.
 
-       Onder de film ligt het eerste beeldje van diezelfde film als stilstaand
-       beeld. Dat moet er liggen: speelt de film niet -- prefers-reduced-motion,
-       databesparing, een echt trage lijn of geen JavaScript -- dan zag je
-       daarvoor het antraciet van .hero en was de hero dus een zwart vlak.
-       Nu zie je hetzelfde beeld, alleen stil. Omdat het het eerste beeldje is,
-       is er geen sprong op het moment dat de film erin vervaagt.
+       Let op de volgorde: de FILM staat eerst en het stilstaande beeld erna,
+       dus het beeld ligt er BOVENOP. Het vervaagt weg zodra de film loopt.
+
+       Dat is omgekeerd aan wat je zou verwachten, en het is bewust: zo staat de
+       film nooit op opacity 0. Safari speelt een film die niet zichtbaar is niet
+       of stopt hem weer, dus een film die op zichzelf moet wachten tot hij
+       speelt om zichtbaar te worden, kan in een impasse komen. Nu is de film
+       altijd volledig gerenderd en is het stilstaande beeld het enige dat
+       verandert.
+
+       Speelt de film niet -- prefers-reduced-motion, Save-Data, de
+       energiespaarstand van iOS, Safari's eigen autoplay-instelling per site of
+       geen JavaScript -- dan blijft het stilstaande beeld liggen. Omdat het het
+       eerste beeldje van diezelfde film is, zie je geen sprong op het moment
+       dat de film alsnog begint.
 
        De film is stockmateriaal en geen opname van J. Boom: een grijze bus, een
        monteur die een kozijn stelt, een woning met een dakkapel. Het werk in
@@ -94,9 +103,9 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE =================
        Zie _generator/maak_herovideo.py. -->
   <section class="hero" id="s01-introductie" data-header-theme="light">
     <div class="hero--beeld" aria-hidden="true">
-      {foto("jboom-hero-stilstaand", laden="eager", maten="100vw", alt="")}
       <video class="hero--video" data-herovideo="assets/video/jboom-hero-1280.mp4"
              muted loop playsinline preload="none" tabindex="-1"></video>
+      {foto("jboom-hero-stilstaand", laden="eager", maten="100vw", alt="")}
       <span class="hero--sluier"></span>
     </div>
     <div class="container hero--container">

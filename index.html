@@ -31,7 +31,7 @@
      noscript-regel vangt op dat zonder JavaScript ook die onload niet afgaat. -->
 <link rel="stylesheet" href="cookiebalk.min.css?v=6d43e37e" media="print" onload="this.media='all'" />
 <noscript><link rel="stylesheet" href="cookiebalk.min.css?v=6d43e37e" /></noscript>
-<style data-page-css="index">.hero--beeld{position:absolute;inset:0;overflow:hidden}.hero--beeld img,.hero--video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero--video{opacity:0;transition:opacity var(--duration-image) var(--ease-standard)}.hero--video.is-zichtbaar{opacity:1}.hero--sluier{position:absolute;inset:0;background-color:#00000040}.hero{position:relative;min-height:100vh;min-height:100svh;background-color:var(--color-groen);display:flex}.hero--container{position:relative;width:100%;max-width:var(--container-max);margin-inline:auto;display:flex;align-items:flex-end;padding:160px var(--inset-x) var(--space-650)}@media(max-width:576px){.hero--container{padding:120px var(--inset-x) var(--space-650)}}.hero--content{width:100%;max-width:900px}.hero--title{margin:var(--space-500) 0;color:var(--color-white);font-size:clamp(24px,6vw,72px)}@media(max-width:576px){.hero--title{font-size:clamp(28px,9vw,34px)}}.hero--intro{color:var(--color-white);max-width:var(--content-max-half)}.hero--intro p+p{margin-top:1.6em}.hero--actions{margin-top:var(--space-700);display:flex;flex-wrap:wrap;gap:var(--space-300)}@media(max-height:800px){.hero--container{padding-top:132px;padding-bottom:var(--space-500)}.hero--title{margin:var(--space-400) 0;font-size:clamp(24px,min(6vw,9vh),72px)}.hero--actions{margin-top:var(--space-500)}}@media(max-height:520px){.hero--container{padding-top:120px;padding-bottom:var(--space-400)}.hero--title{margin:var(--space-300) 0;font-size:clamp(22px,min(5.5vw,8.5vh),72px)}.hero--intro{font-size:.9375rem}.hero--actions{margin-top:var(--space-400)}}@media(max-width:576px)and (max-height:800px){.hero--container{padding-top:100px}}.usp__getal{font-family:var(--font-light);font-weight:var(--weight-light);font-size:clamp(3rem,2rem + 4vw,5rem);line-height:1;margin:0}.usp__label,.projectkaart__klant{font-family:var(--font-medium);font-weight:var(--weight-medium);font-size:.6875rem;letter-spacing:var(--tracking-label);text-transform:uppercase;margin:0}.content-text-side-visual{background-color:var(--color-white)}</style>
+<style data-page-css="index">.hero--beeld{position:absolute;inset:0;overflow:hidden}.hero--beeld img,.hero--video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero--video{opacity:1}.hero--beeld picture img{opacity:1;transition:opacity var(--duration-image) var(--ease-standard)}.hero--video.is-zichtbaar~picture img{opacity:0}.hero--sluier{position:absolute;inset:0;background-color:#00000040}.hero{position:relative;min-height:100vh;min-height:100svh;background-color:var(--color-groen);display:flex}.hero--container{position:relative;width:100%;max-width:var(--container-max);margin-inline:auto;display:flex;align-items:flex-end;padding:160px var(--inset-x) var(--space-650)}@media(max-width:576px){.hero--container{padding:120px var(--inset-x) var(--space-650)}}.hero--content{width:100%;max-width:900px}.hero--title{margin:var(--space-500) 0;color:var(--color-white);font-size:clamp(24px,6vw,72px)}@media(max-width:576px){.hero--title{font-size:clamp(28px,9vw,34px)}}.hero--intro{color:var(--color-white);max-width:var(--content-max-half)}.hero--intro p+p{margin-top:1.6em}.hero--actions{margin-top:var(--space-700);display:flex;flex-wrap:wrap;gap:var(--space-300)}@media(max-height:800px){.hero--container{padding-top:132px;padding-bottom:var(--space-500)}.hero--title{margin:var(--space-400) 0;font-size:clamp(24px,min(6vw,9vh),72px)}.hero--actions{margin-top:var(--space-500)}}@media(max-height:520px){.hero--container{padding-top:120px;padding-bottom:var(--space-400)}.hero--title{margin:var(--space-300) 0;font-size:clamp(22px,min(5.5vw,8.5vh),72px)}.hero--intro{font-size:.9375rem}.hero--actions{margin-top:var(--space-400)}}@media(max-width:576px)and (max-height:800px){.hero--container{padding-top:100px}}.usp__getal{font-family:var(--font-light);font-weight:var(--weight-light);font-size:clamp(3rem,2rem + 4vw,5rem);line-height:1;margin:0}.usp__label,.projectkaart__klant{font-family:var(--font-medium);font-weight:var(--weight-medium);font-size:.6875rem;letter-spacing:var(--tracking-label);text-transform:uppercase;margin:0}.content-text-side-visual{background-color:var(--color-white)}</style>
 
 <link rel="icon" href="assets/favicon/jboom-favicon.ico" sizes="16x16 32x32 48x48" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/jboom-favicon-32.png" />
@@ -234,12 +234,21 @@
        Alleen de film als achtergrond, geen foto eronder. De foto van de gele
        bedrijfsbussen die hier stond is er op verzoek uit.
 
-       Onder de film ligt het eerste beeldje van diezelfde film als stilstaand
-       beeld. Dat moet er liggen: speelt de film niet -- prefers-reduced-motion,
-       databesparing, een echt trage lijn of geen JavaScript -- dan zag je
-       daarvoor het antraciet van .hero en was de hero dus een zwart vlak.
-       Nu zie je hetzelfde beeld, alleen stil. Omdat het het eerste beeldje is,
-       is er geen sprong op het moment dat de film erin vervaagt.
+       Let op de volgorde: de FILM staat eerst en het stilstaande beeld erna,
+       dus het beeld ligt er BOVENOP. Het vervaagt weg zodra de film loopt.
+
+       Dat is omgekeerd aan wat je zou verwachten, en het is bewust: zo staat de
+       film nooit op opacity 0. Safari speelt een film die niet zichtbaar is niet
+       of stopt hem weer, dus een film die op zichzelf moet wachten tot hij
+       speelt om zichtbaar te worden, kan in een impasse komen. Nu is de film
+       altijd volledig gerenderd en is het stilstaande beeld het enige dat
+       verandert.
+
+       Speelt de film niet -- prefers-reduced-motion, Save-Data, de
+       energiespaarstand van iOS, Safari's eigen autoplay-instelling per site of
+       geen JavaScript -- dan blijft het stilstaande beeld liggen. Omdat het het
+       eerste beeldje van diezelfde film is, zie je geen sprong op het moment
+       dat de film alsnog begint.
 
        De film is stockmateriaal en geen opname van J. Boom: een grijze bus, een
        monteur die een kozijn stelt, een woning met een dakkapel. Het werk in
@@ -256,9 +265,9 @@
        Zie _generator/maak_herovideo.py. -->
   <section class="hero" id="s01-introductie" data-header-theme="light">
     <div class="hero--beeld" aria-hidden="true">
-      <picture><source type="image/avif" srcset="assets/foto/jboom-hero-stilstaand-420.avif 420w, assets/foto/jboom-hero-stilstaand-640.avif 640w, assets/foto/jboom-hero-stilstaand-800.avif 800w, assets/foto/jboom-hero-stilstaand-1024.avif 1024w, assets/foto/jboom-hero-stilstaand-1280.avif 1280w" sizes="100vw"><img src="assets/foto/jboom-hero-stilstaand-1280.webp" srcset="assets/foto/jboom-hero-stilstaand-420.webp 420w, assets/foto/jboom-hero-stilstaand-640.webp 640w, assets/foto/jboom-hero-stilstaand-800.webp 800w, assets/foto/jboom-hero-stilstaand-1024.webp 1024w, assets/foto/jboom-hero-stilstaand-1280.webp 1280w" sizes="100vw" width="1280" height="720" alt="" loading="eager" fetchpriority="high" decoding="async"></picture>
       <video class="hero--video" data-herovideo="assets/video/jboom-hero-1280.mp4"
              muted loop playsinline preload="none" tabindex="-1"></video>
+      <picture><source type="image/avif" srcset="assets/foto/jboom-hero-stilstaand-420.avif 420w, assets/foto/jboom-hero-stilstaand-640.avif 640w, assets/foto/jboom-hero-stilstaand-800.avif 800w, assets/foto/jboom-hero-stilstaand-1024.avif 1024w, assets/foto/jboom-hero-stilstaand-1280.avif 1280w" sizes="100vw"><img src="assets/foto/jboom-hero-stilstaand-1280.webp" srcset="assets/foto/jboom-hero-stilstaand-420.webp 420w, assets/foto/jboom-hero-stilstaand-640.webp 640w, assets/foto/jboom-hero-stilstaand-800.webp 800w, assets/foto/jboom-hero-stilstaand-1024.webp 1024w, assets/foto/jboom-hero-stilstaand-1280.webp 1280w" sizes="100vw" width="1280" height="720" alt="" loading="eager" fetchpriority="high" decoding="async"></picture>
       <span class="hero--sluier"></span>
     </div>
     <div class="container hero--container">
@@ -831,7 +840,7 @@
   </div>
 </footer>
 
-<script src="site.min.js?v=8129318a"></script>
+<script src="site.min.js?v=f5b1af35"></script>
 <script src="contactformulier.min.js?v=7654b6f7"></script>
 <script src="index.min.js?v=cfc991cf"></script>
 </div><!-- /.content__wrapper -->
