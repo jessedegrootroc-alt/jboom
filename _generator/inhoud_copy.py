@@ -44,22 +44,33 @@ import inhoud_jboom as D
 # Die vier komen hieronder terug, verdeeld over de secties van dit template.
 HOME = {
     'eyebrow': 'Aannemer in Purmerend sinds 1935',
-    'h1': 'Bouwen en verbouwen in Purmerend, door twee vakmensen die er zelf bij staan',
-    # Eén alinea, 26 woorden. De tweede alinea die hier stond ("Martin en Mario
-    # voeren het gesprek...") is eruit: de kop zegt al dat u met twee vakmensen
-    # te maken heeft die er zelf bij staan, en de planningsbelofte staat verderop
-    # op deze pagina en op werkwijze.html. Er is dus niets weggevallen wat de
-    # bezoeker hier nog niet wist of straks niet leest.
+    # Kop en lead zijn aangeleverd (Jesse, 10 september 2026). Ze staan hier
+    # onveranderd; wat hieronder staat is alleen waar de beweringen op rusten.
     #
-    # Wat deze alinea wel moet doen, doet de kop niet: zeggen wát er gebouwd
-    # wordt en voor wie. Vandaar de drie werkzaamheden en de twee doelgroepen.
-    # "Wij" en niet de bedrijfsnaam: die staat in het logo erboven en in de
-    # eyebrow, en driemaal dezelfde naam in één hero leest als een formulier.
+    # "Meer ruimte in huis" -- outcome-led in plaats van dienst-led, en dat is
+    #   ook hoe de bron zelf opent: "Wordt uw huis te klein?". Het dekt niet
+    #   alle negen diensten (renovatie, kozijnen, gevelbekleding en deuren gaan
+    #   niet over ruimte), maar het is wel de vraag waarmee de meeste mensen
+    #   binnenkomen. De volle breedte staat een sectie lager en in het menu.
+    # "gebouwd door de vakmensen zelf" -- de bron zegt dat het bedrijf is
+    #   teruggebracht naar twee man en dat Mario en Martin samen aan de
+    #   projecten werken. De eigenaren zijn dus ook de uitvoerders.
+    # "Van aanbouw en dakkapel tot complete verbouwing" -- alle drie staan in
+    #   de dienstenlijst van de bron.
+    # "Martin en Mario" -- bij naam genoemd op de homepage van de bron, met
+    #   hun relatie en rol.
+    # "één aanspreekpunt van eerste afspraak tot oplevering" -- de bron zegt
+    #   "Wij coördineren het gehele project. Indien gewenst van de eerste
+    #   tekening tot de finishing touch." Met twee man die zelf op de bouw
+    #   staan is één aanspreekpunt een herformulering daarvan, geen nieuw feit.
+    #   Er staat bewust geen doorlooptijd of termijn bij; die noemt de bron
+    #   nergens.
+    'h1': 'Meer ruimte in huis, gebouwd door de vakmensen zelf',
     'lead': [
-        'Wordt uw huis te klein? Wij bouwen de aanbouw, dakkapel of verbouwing die '
-        'dat oplost &mdash; voor particulieren en Verenigingen van Eigenaren in '
-        'Purmerend en omstreken.',
+        'Van aanbouw en dakkapel tot complete verbouwing. Martin en Mario verzorgen '
+        'het werk zelf, met één aanspreekpunt van eerste afspraak tot oplevering.',
     ],
+
     'cta_primair': ('Vraag een offerte aan', 'offerte.html'),
     'cta_secundair': ('Bekijk onze diensten', 'diensten.html'),
 

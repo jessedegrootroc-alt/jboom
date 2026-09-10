@@ -6,13 +6,14 @@
 
     jboom/video/hero-bron.mp4  ->  assets/video/jboom-hero-1280.mp4
 
-Er komt géén posterframe uit dit script. Het stilstaande beeld onder de film is
-de foto van de twee gele bedrijfsbussen op het terrein aan de Pascalstraat
-(`jboom-bedrijfsbussen`), en dat is een bewuste keuze: site.js hangt de film
-niet in bij `prefers-reduced-motion`, bij databesparing en op een 2g-lijn, en
-zonder JavaScript gebeurt er helemaal niets. Die bezoeker hoort het echte werk
-van J. Boom te zien en geen stockbeeld. Een posterframe uit de film zou daar
-precies het omgekeerde doen.
+Er komt géén posterframe uit dit script, en er ligt ook geen foto onder de film:
+de hero laat op verzoek alleen de film zien.
+
+Speelt de film niet -- `prefers-reduced-motion`, databesparing, een 2g-lijn of
+geen JavaScript, want dan hangt site.js hem niet in -- dan valt de hero terug op
+het antraciet uit `.hero` (#1A171B). Dat is de beste van de mogelijkheden:
+witte tekst haalt daar 17,76:1. Een posterframe zou dat vervangen door een
+still uit dezelfde stockfilm, die dan ook nog opgehaald moet worden.
 
 DE FILM IS GEEN OPNAME VAN J. BOOM
 Aangeleverd als `hero-logistiek_20260910102219.mp4` (10 september 2026) en

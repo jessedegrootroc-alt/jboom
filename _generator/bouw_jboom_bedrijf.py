@@ -92,7 +92,24 @@ def over_ons():
                                        'onderdelen, met de besluitvorming die daarbij hoort.'),
     ]))
 
-    inhoud = f'''{paginahero('01', 'over-ons', 'Over ons', D.afbreek(_t(k['h1'])), 'jboom-veranda-zonwering')}
+    # De archieffoto in de hero, op verzoek. Let op de maat: het bronbestand is
+    # 436x284 en meer heeft de bron niet. Nagemeten op 1440px is dit vak
+    # 720x492, dus de foto wordt 1,65x opgeschaald in CSS-pixels -- en op een
+    # scherm met dubbele pixeldichtheid komt hij 3,3x tekort. Daar wordt hij
+    # zichtbaar zachter van; op een grote retina-monitor het meest.
+    #
+    # Bewust geaccepteerd, en bewust geen opgeschaalde varianten aangemaakt:
+    # pixels bijverzinnen maakt het beeld niet scherper, alleen het bestand
+    # groter. De ladder van dit beeld blijft dus [436].
+    #
+    # De uitsnede valt mee: het vak is 1,462 en de foto 1,535, dus er gaat maar
+    # een paar procent van de zijkanten af.
+    #
+    # Komt er een scan van het origineel, dan wordt dit een van de sterkste
+    # beelden van de site; zie punt 3 in CONTENT-TODO.md.
+    # Komt er ooit een scan van het origineel, dan is dit één regel in
+    # beeldplan.json plus maak_assets.py draaien; zie punt 3 in CONTENT-TODO.md.
+    inhoud = f'''{paginahero('01', 'over-ons', 'Over ons', D.afbreek(_t(k['h1'])), 'jboom-historie')}
 
 {_tekstsectie('02', 'lead', None, k['lead'])}
 

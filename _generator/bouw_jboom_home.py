@@ -8,10 +8,12 @@ allemaal terug, verdeeld over de secties van dit template, en daaronder staan
 de diensten, de projecten en de referenties zodat een bezoeker vanaf de
 homepage verder kan.
 
-De hero van het template heeft een film. J. Boom heeft er geen, en er wordt er
-ook geen bij gemaakt: de hero staat op het beeld van de twee bedrijfsbussen.
-site.js hangt alleen een film in als er een data-herovideo staat, dus zonder
-dat attribuut valt die code stil zonder fout.
+De hero staat op de aangeleverde film, met een sluier van 25% erover en het
+antraciet van .hero eronder voor als de film niet speelt. Die film is
+stockmateriaal en geen opname van J. Boom; wat dat voor de opmaak betekent staat
+bij de sectie zelf en in _generator/maak_herovideo.py. site.js hangt alleen een
+film in als er een data-herovideo staat, dus zonder dat attribuut valt die code
+stil zonder fout.
 """
 import json
 import pathlib
@@ -67,25 +69,30 @@ werkkaarten = "\n".join(dienstkaart(i, d, '', kolom="col-lg-4 col-md-6")
                         for i, d in enumerate(werk + LOSSE_DIENSTEN))
 
 inhoud = f'''  <!-- ================= 01 INTRODUCTIE =================
-       Twee lagen beeld. Onderop de foto van de twee bedrijfsbussen op het
-       terrein aan de Pascalstraat: dat is J. Boom zelf, en dat is wat je ziet
-       zolang de film niet speelt. Daarover vervaagt de aangeleverde film.
+       Alleen de film als achtergrond, geen foto eronder. De foto van de gele
+       bedrijfsbussen die hier stond is er op verzoek uit.
+
+       Wat de bezoeker ziet als de film NIET speelt: het antraciet uit
+       .hero (background-color: var(--color-groen), #1A171B). Dat is geen
+       gebrek maar de beste van de drie: witte tekst haalt daar 17,76:1, waar
+       ze op de gele bus 1,04:1 haalde. Het gebeurt bij
+       prefers-reduced-motion, bij databesparing, op een 2g-lijn en zonder
+       JavaScript -- site.js hangt de film dan niet in.
 
        De film is stockmateriaal en geen opname van J. Boom: een grijze bus, een
        monteur die een kozijn stelt, een woning met een dakkapel. Het werk in
        beeld is wat J. Boom doet, de bus en de monteur zijn niet van hen. Daarom
-       is het beeld decoratief (aria-hidden, alt="") en draagt de film geen
-       enkele bewering; wat de hero beweert staat in de kop en de lead.
+       is het beeld decoratief (aria-hidden) en draagt de film geen enkele
+       bewering; wat de hero beweert staat in de kop en de lead.
 
-       site.js hangt de film pas in als dat mag: niet bij prefers-reduced-motion,
-       niet bij databesparing en niet op een 2g-lijn, en zonder JavaScript
-       gebeurt er niets. Vandaar geen src en geen poster hier -- de foto eronder
-       is de terugval. Zie ook _generator/maak_herovideo.py. -->
+       Geen src en geen poster: site.js hangt de bron zelf in, en een poster zou
+       een still van dezelfde stockfilm zijn die dan óók opgehaald wordt.
+       Zie _generator/maak_herovideo.py. -->
   <section class="hero" id="s01-introductie" data-header-theme="light">
     <div class="hero--beeld" aria-hidden="true">
-      {foto("jboom-bedrijfsbussen", laden="eager", maten="100vw", alt="")}
       <video class="hero--video" data-herovideo="assets/video/jboom-hero-1280.mp4"
              muted loop playsinline preload="none" tabindex="-1"></video>
+      <span class="hero--sluier"></span>
     </div>
     <div class="container hero--container">
       <div class="hero--content">
@@ -200,11 +207,27 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE =================
     </div>
   </section>
 
-  <!-- ================= 08 OVER ONS ================= -->
-  <section class="content-block" id="s08-over-ons">
+  <!-- ================= 08 OVER ONS =================
+       De archieffoto links, de tekst rechts. Hij stond eerst los onder het
+       tekstblok, en dat las als een losse bijlage in plaats van als onderdeel
+       van het verhaal.
+
+       Dit gebruikt hetzelfde component als sectie 07 (tekst naast beeld), maar
+       met de kolommen omgedraaid: beeld eerst, tekst erna. De kolomverhouding
+       is 4/8 en niet 6/6, omdat het bronbestand 436px breed is en meer niet.
+       In een kolom van een derde (op 1320px inhoud is dat 440px) staat hij dus
+       op zijn eigen maat in plaats van uitgerekt. -->
+  <section class="content-text-side-visual" id="s08-over-ons">
     <div class="container">
-      <div class="content-block--container background--white">
-        <div class="row g-0">
+      <div class="content-text-side-visual--container background--white">
+        <div class="row gx-0">
+          <div class="col-lg-4 col-12">
+            <figure class="archieffoto">
+              {foto("jboom-historie", maten="(max-width: 467px) calc(100vw - 32px), 436px")}
+              <figcaption>Uit het familiearchief. Het bedrijf begon in 1935 en is
+                sindsdien in de familie gebleven.</figcaption>
+            </figure>
+          </div>
           <div class="col-lg-8 col-12">
             <span class="subtitle" style="margin-bottom:var(--space-500)">Over ons</span>
             <h2 class="section-heading">{_t(C.HOME['over_kop'])}</h2>
@@ -217,11 +240,6 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE =================
           </div>
         </div>
       </div>
-      <figure class="archieffoto">
-        {foto("jboom-historie", maten="(max-width: 467px) calc(100vw - 32px), 436px")}
-        <figcaption>Uit het familiearchief. Het bedrijf begon in 1935 en is sindsdien
-          in de familie gebleven.</figcaption>
-      </figure>
     </div>
   </section>
 

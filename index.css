@@ -5,57 +5,54 @@
 
 /* ---- Hero (§6.7) --------------------------------------------------------
    Beeld over de volle breedte met de inhoud linksonder, zoals in de gids.
-   Onderop de foto van de twee gele bedrijfsbussen; daarover vervaagt de
-   aangeleverde film. Die film is stockmateriaal en geen opname van J. Boom --
-   waarom dat uitmaakt en wat het voor de opmaak betekent, staat in
-   _generator/maak_herovideo.py. */
+   Als beeld staat er alleen de aangeleverde film; de foto die eronder lag is
+   er op verzoek uit. Die film is stockmateriaal en geen opname van J. Boom --
+   waarom dat uitmaakt, staat in _generator/maak_herovideo.py.
+
+   De img-selector hieronder blijft staan: het is de component-regel die het
+   beeld in dit vak op cover zet, en hij geldt weer zodra er ooit een foto of
+   poster in de hero komt. */
 .hero--beeld { position: absolute; inset: 0; overflow: hidden; }
 .hero--beeld img,
 .hero--video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 /* De film staat op nul en vervaagt erin zodra hij echt loopt. Weigert de browser
    het automatisch afspelen -- en site.js hangt hem helemaal niet in bij
    prefers-reduced-motion, databesparing of een 2g-lijn -- dan blijft dit op nul
-   staan en blijft de foto staan. Dat is bewust de foto van de bussen en geen
-   posterframe uit de film: wie de film niet krijgt, hoort het echte werk van
-   J. Boom te zien en geen stockbeeld. */
+   staan en ziet de bezoeker het antraciet van .hero eronder. Witte tekst haalt
+   daar 17,76:1, dus dat is de leesbaarste van alle varianten. */
 .hero--video { opacity: 0; transition: opacity var(--duration-image) var(--ease-standard); }
 .hero--video.is-zichtbaar { opacity: 1; }
 
-/* GEEN SLUIER OVER HET BEELD -- op verzoek weggehaald (10 september 2026).
-   De film moet onbewerkt te zien zijn; de zwarte gradient die hier lag maakte
-   hem bijna zwart.
+/* De sluier over het beeld, op 25% (op verzoek, 10 september 2026).
+   Hij was er eerst niet, daarna op 82-86%, en dat maakte de film bijna zwart.
+   25% is de gevraagde middenweg: de film blijft goed te zien en de tekst komt
+   iets los van het beeld.
 
-   WAT DAT KOST, ZODAT HET OPGESCHREVEN STAAT
-   Er ligt nu niets tussen het beeld en de witte tekst. Nagemeten op de echte
-   regelvakken (4 breekpunten) tegen de foto en alle 240 beeldjes van de film
-   haalt witte tekst in het slechtste geval ongeveer 1,2:1, waar WCAG 2.2 AA
-   4,5:1 vraagt voor het label en de lead en 3:1 voor de kop. Op de lichte
-   beeldjes -- de bewolkte lucht, de witte kozijnen, de gele flank van een bus
-   -- is de tekst daar dus slecht of niet leesbaar. Datzelfde geldt voor het
-   witte logo en het menu in de balk erboven.
+   DE VORM
+   Egaal 25%, over het hele vlak. Er zat even een verloop in dat in het midden
+   naar 18% zakte, waar op een breed scherm geen tekst staat; dat is eruit,
+   want 25% moet 25% zijn en niet gemiddeld 25%. Eén waarde is ook eerlijker
+   over wat er gebeurt: de film wordt overal even veel gedempt.
 
-   DRIE MANIEREN OM DE FILM LICHT TE HOUDEN EN DE TEKST LEESBAAR
-   1. Een eigen vlak achter de copy (antraciet, eventueel half doorzichtig).
-      Het beeld blijft dan overal onbewerkt te zien, alleen achter de tekst
-      niet. Dit is de enige oplossing die de film echt licht laat.
-   2. Een lichte sluier van ongeveer 0,45. De film komt duidelijk terug maar de
-      norm wordt nog steeds niet gehaald; halen vraagt ongeveer 0,82.
-   3. Donkere tekst in plaats van witte. Dat werkt alleen als het beeld overal
-      licht is, en dat is deze film niet: de eerste seconden zijn donker.
+   WAT 25% WEL EN NIET OPLOST
+   Wel: het beeld wordt rustiger en de tekst leest merkbaar beter dan zonder.
+   Niet: de norm. Nagemeten op de echte regelvakken tegen alle 240 beeldjes van
+   de film komt witte tekst met deze sluier op ongeveer 1,5:1 op de lichtste
+   beeldjes, waar WCAG 2.2 AA 4,5:1 vraagt voor het label en de lead en 3:1
+   voor de kop. Om dat te halen is ongeveer 82% nodig -- dat is uitgerekend
+   en gemeten, geen schatting -- en dat is precies de sluier die te donker werd
+   bevonden.
 
-   Zeg welke en ik zet hem erin. Het component zelf (.hero--sluier) is uit de
-   HTML (bouw_jboom_home.py) en uit deze stylesheet. Terugzetten is die span
-   weer in de hero en deze regel hier:
+   De uitweg uit die klem is niet een ander percentage maar de tekst van het
+   beeld halen: een eigen vlak achter de copy. Dan blijft de film overal
+   onbewerkt en hoeft de sluier alleen nog te doen wat hij hier doet, namelijk
+   het beeld rustiger maken. Zie de notitie bij .hero--actions verderop.
 
-     .hero--sluier {
-       position: absolute; inset: 0;
-       background: linear-gradient(rgba(0, 0, 0, .86) 0%,
-                                   rgba(0, 0, 0, .82) 38%,
-                                   rgba(0, 0, 0, .86) 100%);
-     }
-
-   Die waarden zijn de gemeten ondergrens: 0,82 haalt 4,5:1 voor alle tekst op
-   alle vier de breekpunten, tegen de foto en tegen elk beeldje van de film. */
+   Verandert de film, dan hoort deze meting opnieuw te gebeuren. */
+.hero--sluier {
+  position: absolute; inset: 0;
+  background-color: rgba(0, 0, 0, .25);
+}
 /* De hero vult het scherm. min-height en niet height, zodat hij meegroeit als de
    tekst niet past; op een kleine telefoon in liggende stand is 100vh nog geen
    400px en dan moet de inhoud eruit kunnen lopen in plaats van afgesneden te
@@ -79,28 +76,21 @@
 }
 @media (max-width: 576px) { .hero--container { padding: 120px var(--inset-x) var(--space-650); } }
 
-/* 1150px en niet de 900px van het template, en 5,7vw en niet 6vw: samen zorgen
-   die twee ervoor dat de kop op drie regels staat en niet op vier.
-
-   De kop is 75 tekens ("Bouwen en verbouwen in Purmerend, door twee vakmensen
-   die er zelf bij staan"). Of dat drie of vier regels wordt, hangt niet aan de
-   breedte of aan de graad apart maar aan hun verhouding: gemeten breekt deze
-   kop op drie regels zodra de tekstkolom minstens ongeveer 15,6x de graad is.
-   In 900px bij 72px is die verhouding 12,5 en werd het vier regels.
-
-     1150px / 72px = 16,0  -> drie regels, en de graad blijft 72px
-     5,7vw houdt de verhouding ook onder 1280px overeind: op 1024px breed is
-     de kolom 928px en de graad 58,4px, dus 15,9. Met 6vw was dat 15,1 en
-     kwam de vierde regel terug.
-
-   De lead schuift niet mee: die heeft zijn eigen max-width
-   (--content-max-half, 664px), dus de leesregel blijft even lang als hiervoor.
-   Onder 576px staat hieronder een vaste 36px; daar past deze kop niet op drie
-   regels zonder de graad onleesbaar klein te maken, en daar is de kop dan ook
-   niet het probleem dat hij op een breed scherm was. */
-.hero--content { width: 100%; max-width: 1150px; }
-.hero--title { margin: var(--space-500) 0; color: var(--color-white); font-size: clamp(24px, 5.7vw, 72px); }
-@media (max-width: 576px) { .hero--title { font-size: 36px; } }
+/* Kolombreedte en type-schaal zijn die van de template. Ze zijn even
+   afgeweken (1150px / 5,7vw) toen de kop nog 75 tekens was en op vier regels
+   viel; met de kop van 39 tekens staat hij op twee regels binnen de 900px van
+   het template, dus de afwijking is eruit. Wordt de kop ooit weer langer, dan
+   is de vuistregel: hij breekt op N regels zodra de kolom ongeveer 15,6x de
+   graad is gedeeld door N-1. */
+.hero--content { width: 100%; max-width: 900px; }
+.hero--title { margin: var(--space-500) 0; color: var(--color-white); font-size: clamp(24px, 6vw, 72px); }
+/* Onder 576px stond hier een vaste 36px. Met de kop van 51 tekens werd dat
+   vier regels op 375px breed, en drie is de grens. Bij 34px past hij in de
+   kolom van 343px op drie regels; de clamp laat hem daaronder meelopen met de
+   breedte, zodat ook 360 en 320px op drie regels blijven. Gemeten op 576, 540,
+   480, 430, 414, 393, 390, 375, 360 en 320: overal drie regels of minder, met
+   de knoppen boven de vouw. */
+@media (max-width: 576px) { .hero--title { font-size: clamp(28px, 9vw, 34px); } }
 .hero--intro { color: var(--color-white); max-width: var(--content-max-half); }
 .hero--intro p + p { margin-top: 1.6em; }
 .hero--actions { margin-top: var(--space-700); display: flex; flex-wrap: wrap; gap: var(--space-300); }
@@ -124,12 +114,12 @@
    uit de clamp niet. */
 @media (max-height: 800px) {
   .hero--container { padding-top: 132px; padding-bottom: var(--space-500); }
-  .hero--title { margin: var(--space-400) 0; font-size: clamp(24px, min(5.7vw, 9vh), 72px); }
+  .hero--title { margin: var(--space-400) 0; font-size: clamp(24px, min(6vw, 9vh), 72px); }
   .hero--actions { margin-top: var(--space-500); }
 }
 @media (max-height: 520px) {
   .hero--container { padding-top: 120px; padding-bottom: var(--space-400); }
-  .hero--title { margin: var(--space-300) 0; font-size: clamp(22px, min(5.2vw, 8.5vh), 72px); }
+  .hero--title { margin: var(--space-300) 0; font-size: clamp(22px, min(5.5vw, 8.5vh), 72px); }
   .hero--intro { font-size: 0.9375rem; }
   .hero--actions { margin-top: var(--space-400); }
 }

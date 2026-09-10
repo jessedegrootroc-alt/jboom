@@ -91,8 +91,15 @@
      --color-secondary de lichte tint die OP zo'n donker vlak gaat. De waarden
      komen dus wel uit de gids, de namen zijn die van het template gebleven. */
   --color-primary:           #D42A24;  /* Boom Rood, uit het logo: primaire knop en kleine vlakken (10%) */
-  --color-secondary:         #FFCB34;  /* Boom Geel: knopvulling en linkhover OP donkere merkvlakken */
-  --color-accent:            #7C6C10;  /* Gold Ink: tekstaccent en de markeringskleur (--color-geel) */
+  --color-secondary:         #FFC801;  /* Boom Geel: knopvulling en linkhover OP donkere merkvlakken; gelijk aan --color-geel en aan het heropatroon */
+  /* Gold Ink. Nu niet in gebruik: de gele vlakken staan op #FFC801 en de tekst
+     daarop op antraciet. Het token blijft staan omdat het de enige tint uit de
+     goudfamilie is die WEL als tekstkleur op wit mag (5,24:1); #FFC801 haalt
+     daar 1,55:1. Wil je ooit een gouden link of label op een lichte
+     achtergrond, dan is dit de kleur en niet --color-geel.
+     --color-accent-strong hieronder is de bijbehorende hovertoon. Beide staan
+     nu ongebruikt in het systeem; dat is bewust en niet vergeten. */
+  --color-accent:            #7C6C10;
   --color-background:        #FFFFFF;  /* de dominante basis (60%) */
   --color-background-subtle: #F4F3F0;  /* rustige afwijkende achtergrond */
   --color-text:              #1A171B;  /* koppen en lopende tekst, uit het logo */
@@ -115,8 +122,20 @@
      antraciet uit het logo; de namen zijn historisch, de waarden komen uit
      brand-style.md. Wit haalt op Gold Ink 5,24:1, dus alles wat op dit vlak
      staat blijft leesbaar. */
-  --color-geel:              var(--color-accent);
-  --color-geel-hover:        var(--color-accent-strong);
+  /* Het merkgeel. Was Gold Ink (#7C6C10), en dat leest als olijfbruin; op
+     verzoek vervangen door #FFC801 -- dezelfde kleur als het aangeleverde
+     heropatroon, dus de gele laag van de site is nu overal één tint.
+
+     LET OP bij het wijzigen: dit is uitsluitend een VLAKKLEUR. Wit haalt op
+     #FFC801 maar 1,55:1, dus de tekst en de iconen op dit vlak staan op
+     --color-op-geel (antraciet, 11,43:1). Dat is ook wat brand-style.md
+     voorschrijft: tekst op het gele merkvlak is altijd #1A171B.
+
+     De hovertoon is een stap donkerder geel en niet de olijftint van
+     hiervoor; anders wisselt de knop bij aanwijzen van kleurfamilie. */
+  --color-geel:              #FFC801;
+  --color-geel-hover:        #E6B400;
+  --color-op-geel:           var(--color-text);
   /* Het antraciet uit het J. Boom-logo: 51% van alle logopixels is exact
      #1A171B, het rood is de andere 41%. Dit is de kleur van de grote donkere
      vlakken; rood zou op dat formaat schreeuwen en is daarom de knopkleur
@@ -160,7 +179,6 @@
      nodig heeft. */
   --color-text-on-accent:  var(--color-white);
   --color-heading:         var(--color-text);
-  --color-accent-hover:    var(--color-accent-strong);
   /* De haarlijn blijft een gekleurde lijn, zoals de template hem bedoelde,
      maar nu in de merkkleur. De neutrale scheiding gebruikt de zachte
      randkleur uit de merklaag. */
@@ -453,7 +471,7 @@ h1 > span.highlight, h2 > span.highlight, h3 > span.highlight {
   padding: 0 1rem 0.25rem;
   border-radius: var(--radius-chip);
   background-color: var(--color-geel);
-  color: var(--color-text-on-accent);
+  color: var(--color-op-geel);
 }
 
 /* Lopende tekst in kaarten en artikelen is zwaarder en ruimer (§3.5) */
@@ -508,7 +526,7 @@ h1 > span.highlight, h2 > span.highlight, h3 > span.highlight {
    dat we nog niet hebben. Bewust opvallend, zodat het niet per ongeluk live gaat. */
 .invulveld {
   background: var(--color-geel); padding: 0 .25em;
-  font-family: var(--font-medium); font-weight: var(--weight-medium); color: var(--color-text-on-accent);
+  font-family: var(--font-medium); font-weight: var(--weight-medium); color: var(--color-op-geel);
 }
 
 /* Een kolom die zijn inhoud over de volle hoogte laat lopen; nodig als er een
@@ -600,8 +618,8 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 .background--grey  { background-color: var(--color-grey); }
 .background--groen  { background-color: var(--color-groen); color: var(--color-white); }
 .background--groen :is(h1,h2,h3,h4,h5,h6,p,li,a:not(.button)) { color: var(--color-white); }
-.background--geel  { background-color: var(--color-geel); color: var(--color-text-on-accent); }
-.background--geel :is(h1,h2,h3,h4,h5,h6,p,li,a:not(.button)) { color: var(--color-text-on-accent); }
+.background--geel  { background-color: var(--color-geel); color: var(--color-op-geel); }
+.background--geel :is(h1,h2,h3,h4,h5,h6,p,li,a:not(.button)) { color: var(--color-op-geel); }
 
 /* Een foto op zijn eigen verhouding, over de breedte van de inhoud. Anders dan
    .case-bleed in cases.css wordt hier niet gesneden: op een groepsfoto valt dan
@@ -618,6 +636,10 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    foto klein tonen leest als een archiefstuk; dezelfde foto uitvergroot leest
    als een fout. */
 .archieffoto { margin: var(--space-700) 0 0; max-width: 436px; }
+/* Staat hij in een kolom naast de tekst (homepage, sectie 08), dan hoort die
+   bovenmarge er niet: de kolom regelt de ruimte al en het component zet de twee
+   kolommen op elkaars midden uit. */
+.content-text-side-visual--container .archieffoto { margin: 0; }
 .archieffoto img { display: block; width: 100%; height: auto; }
 .archieffoto figcaption {
   margin-top: var(--space-300);
@@ -667,7 +689,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    komt en houden de primaire knop; de projecten zijn onderbouwing daarbij en
    trekken daarom niet dezelfde aandacht. */
 .button--secundair  { background-color: var(--color-groen-diepst); color: var(--color-white); }
-.button:hover      { background-color: var(--color-geel-hover); color: var(--color-text-on-accent); }
+.button:hover      { background-color: var(--color-geel-hover); color: var(--color-op-geel); }
 /* Na de regel hierboven, niet ervoor: die heeft dezelfde specificiteit en
    zou de rode knop bij hover naar Gold Ink zetten. */
 .button--primary:hover  { background-color: var(--color-primary-deep); color: var(--color-text-on-accent); }
@@ -713,31 +735,33 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    viel buiten alle eerdere metingen omdat het paneel dicht is zolang je het
    menu niet opent, en verborgen elementen worden overgeslagen.
 
-   Dit geldt ook in de hero. Daar lag de rode knop eerder over het beeld, en
-   dat kan hier niet: de hero staat op de foto van de twee gele bedrijfsbussen.
-   Nagemeten op die foto, met de sluier eroverheen (zie index.css):
+   DE HERO STAAT HIER NIET MEER IN.
+   Dat was wel zo. De hero lag toen op de foto van de twee gele bedrijfsbussen
+   met een donkere sluier eroverheen, en daar haalde het rode vlak 1,17:1 tegen
+   zijn ondergrond terwijl 3:1 de eis is. De knop werd daarom omgedraaid naar
+   wit met een geel alternatief.
 
-     rood #D42A24 als vlak tegen de ondergrond   1,17:1   eis 3
-     wit als vlak tegen dezelfde ondergrond      5,92:1   eis 3
+   Die foto en die sluier zijn er nu allebei niet meer: de hero is de film, met
+   het antraciet van .hero eronder als de film niet speelt. Tegen dat antraciet
+   haalt rood 3,58:1 als vlak, en witte tekst op rood 5,05:1 -- beide binnen de
+   norm, en het is ook wat brand-style.md voorschrijft: rood is de enige
+   actiekleur. De hero gebruikt daarom weer de gewone .button--primary (rood)
+   en .button--secondary (wit).
 
-   Rood haalt dat ook niet met een donkerdere sluier: tegen puur zwart komt
-   #D42A24 niet verder dan 4,1:1, en dat is de bovengrens. Het is dus geen
-   kwestie van de sluier bijstellen maar van de knop omdraaien, precies zoals
-   dat op het CTA-vlak en in de uitklapkaart al gebeurde. De hero staat daarom
-   in dezelfde selector. */
-.hero .button--primary,
+   Op de film zelf wisselt de ondergrond per beeldje; wat dat doet met het
+   knopvlak staat gemeten bij .hero--actions in index.css.
+
+   De uitklapkaart blijft hier wel staan: daar ligt nog steeds een sluier over
+   een bouwtekening, dus die meting geldt onveranderd. */
 .uitklap__kaart .button--primary {
   background-color: var(--color-white); color: var(--color-text);
 }
-.hero .button--primary:hover,
 .uitklap__kaart .button--primary:hover {
   background-color: var(--color-secondary); color: var(--color-text);
 }
-.hero .button--secondary,
 .uitklap__kaart .button--secondary {
   background-color: var(--color-secondary); color: var(--color-text);
 }
-.hero .button--secondary:hover,
 .uitklap__kaart .button--secondary:hover {
   background-color: var(--color-white); color: var(--color-text);
 }
@@ -878,13 +902,18 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    stond er wel, maar was niet te zien. Wit haalt op Gold Ink 5,24:1. */
 .button--icon { background-color: var(--color-grey); }
 .button--icon .button--circle { background-color: var(--color-geel); }
-.button--icon :is(svg, i) { fill: var(--color-white); color: var(--color-white); }
+/* De pijl staat ALTIJD op de gele cirkel: in rust knipt clip-path de cirkel tot
+   een pilletje rechts, precies waar de pijl zit, en bij hover groeit hij open.
+   Daarom antraciet en niet wit -- op #FFC801 haalt wit 1,55:1 en antraciet
+   11,43:1. Met het olijfgoud van hiervoor kon wit nog (5,24:1); met dit geel
+   niet meer. */
+.button--icon :is(svg, i) { fill: var(--color-op-geel); color: var(--color-op-geel); }
 
 .button--icon.button--groen-vlak { background-color: var(--color-groen); }
 .button--icon.button--groen-vlak :is(svg, i) { fill: var(--color-white); color: var(--color-white); }
 .button--icon.button--groen-vlak .button--circle { background-color: var(--color-geel); }
 .button--icon.button--groen-vlak:hover :is(svg, i),
-.hover--icon:hover .button--icon.button--groen-vlak :is(svg, i) { fill: var(--color-text-on-accent); color: var(--color-text-on-accent); }
+.hover--icon:hover .button--icon.button--groen-vlak :is(svg, i) { fill: var(--color-op-geel); color: var(--color-op-geel); }
 /* Dezelfde tweede keus voor de ronde knop: de vulling wordt diepgroen en de
    pijl wit, in plaats van geel met een groene pijl. */
 .button--icon.button--secundair .button--circle { background-color: var(--color-groen-diepst); }
@@ -936,8 +965,8 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 }
 .cta-blocks-advanced__body--bg-grey  { background-color: var(--color-grey); }
 .cta-blocks-advanced__body--bg-white { background-color: var(--color-white); }
-.cta-blocks-advanced__body--bg-geel  { background-color: var(--color-geel); color: var(--color-text-on-accent); }
-.cta-blocks-advanced__body--bg-geel :is(h1,h2,h3,h4,h5,h6,p,li) { color: var(--color-text-on-accent); }
+.cta-blocks-advanced__body--bg-geel  { background-color: var(--color-geel); color: var(--color-op-geel); }
+.cta-blocks-advanced__body--bg-geel :is(h1,h2,h3,h4,h5,h6,p,li) { color: var(--color-op-geel); }
 .cta-blocks-advanced__body--bg-groen  { background-color: var(--color-groen); }
 .cta-blocks-advanced__body--bg-groen :is(h1,h2,h3,h4,h5,h6,p,li) { color: var(--color-white); }
 .cta-blocks-advanced__wrapper {
@@ -1573,7 +1602,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 
 .vlak--geel  { background-color: var(--color-geel); }
 .vlak--geel .vlak__kop,
-.vlak--geel .vlak__tekst { color: var(--color-text-on-accent); }
+.vlak--geel .vlak__tekst { color: var(--color-op-geel); }
 .vlak--grijs { background-color: var(--color-grey); }
 .vlak--wit   { background-color: var(--color-white); }
 /* De merkkleur uit het logo, niet de donkerste toon: dit is een gekleurd vlak
@@ -1827,7 +1856,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 .accordion__header:hover .accordion__icon::before,
 .accordion__header:hover .accordion__icon::after,
 .accordion__item.open .accordion__icon::before,
-.accordion__item.open .accordion__icon::after { background-color: var(--color-text-on-accent); }
+.accordion__item.open .accordion__icon::after { background-color: var(--color-op-geel); }
 .accordion__icon { position: absolute; inset: 12px; width: 16px; height: 16px; }
 .accordion__icon::before, .accordion__icon::after {
   content: ""; position: absolute; top: 50%; left: 0; width: 16px; height: 2px;
@@ -1947,11 +1976,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
 .header--light .submenu--link { background-color: transparent; color: var(--color-white); }
 .header--light .submenu--link:not(.highlight):hover { background-color: var(--color-white); color: var(--color-text-primary); }
 .header--light .hamburger { background-color: transparent; color: var(--color-white); }
-.header--light .hamburger:hover { background-color: var(--color-geel); color: var(--color-text-on-accent); }
+.header--light .hamburger:hover { background-color: var(--color-geel); color: var(--color-op-geel); }
 
 .header--scrolled { background-color: var(--color-grey); }
 .header--scrolled .hamburger { background-color: var(--color-white); }
-.header--scrolled .hamburger:hover { background-color: var(--color-geel); color: var(--color-text-on-accent); }
+.header--scrolled .hamburger:hover { background-color: var(--color-geel); color: var(--color-op-geel); }
 .header--scroll-hidden { transform: translateY(-100%); }
 
 /* Navigatie ≥1200px: één doorlopende witte balk, geen tussenruimte */
@@ -2114,7 +2143,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
               color var(--duration-instant) linear;
 }
 @media (max-width: 1199px) { .hamburger { display: flex; } }
-.hamburger:hover { background-color: var(--color-geel); color: var(--color-text-on-accent); }
+.hamburger:hover { background-color: var(--color-geel); color: var(--color-op-geel); }
 
 /* ============================================================================
    Mobiel schuifpaneel (§6.5)
@@ -2162,7 +2191,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   transition: all var(--duration-fast) var(--ease-legacy);
 }
 .mobile-panel--chip:hover { background-color: var(--color-groen); color: var(--color-white); }
-.mobile-panel--chip.is-close { background-color: var(--color-geel); color: var(--color-text-on-accent); }
+.mobile-panel--chip.is-close { background-color: var(--color-geel); color: var(--color-op-geel); }
 
 /* Hier stond een vaste marge van 200px boven het menu (120 op een telefoon).
    Dat was gemaakt voor een korte lijst; met de uitklappers erbij werd het een
@@ -2242,7 +2271,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   position: absolute; left: var(--space-400); top: var(--space-400);
   z-index: calc(var(--z-header) + 1);
   transform: translateY(-200%);
-  background: var(--color-geel); color: var(--color-text-on-accent);
+  background: var(--color-geel); color: var(--color-op-geel);
   padding: var(--space-300) var(--space-400);
   font-family: var(--font-medium); font-weight: var(--weight-medium);
   font-size: 0.6875rem; letter-spacing: var(--tracking-label); text-transform: uppercase;
@@ -2295,7 +2324,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   cursor: pointer;
   transition: background-color var(--duration-fast) var(--ease-legacy);
 }
-.field--bestand::file-selector-button:hover { background: var(--color-geel); color: var(--color-text-on-accent); }
+.field--bestand::file-selector-button:hover { background: var(--color-geel); color: var(--color-op-geel); }
 
 .veld__fout {
   margin: var(--space-200) 0 0;
@@ -2306,7 +2335,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
      deze foutmelding als kleine tekst nodig heeft. Wit haalt op Gold Ink
      5,24:1. Dezelfde combinatie als de regel voor .background--white verderop,
      die het hier al goed had. */
-  color: var(--color-text-on-accent);
+  color: var(--color-op-geel);
   background: var(--color-geel);
   padding: var(--space-200) var(--space-300);
   align-self: flex-start;
@@ -2319,7 +2348,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
    geen randen om het af te bakenen (DR-3), dus het vlak is het veld. Op wit
    draaien we de twee kleuren daarom om. */
 .background--white .field { background: var(--color-grey); }
-.background--white .veld__fout { background: var(--color-geel); color: var(--color-text-on-accent); }
+.background--white .veld__fout { background: var(--color-geel); color: var(--color-op-geel); }
 
 select.field { appearance: none; cursor: pointer;
                background-image: linear-gradient(45deg, transparent 50%, var(--color-groen) 50%),
@@ -2344,7 +2373,7 @@ select.field { appearance: none; cursor: pointer;
   font-size: 0.6875rem; letter-spacing: var(--tracking-label); text-transform: uppercase;
 }
 .contactformulier__melding:empty { display: none; }
-.contactformulier__melding.is-goed { background: var(--color-geel); color: var(--color-text-on-accent);
+.contactformulier__melding.is-goed { background: var(--color-geel); color: var(--color-op-geel);
                                      padding: var(--space-300) var(--space-400); }
 .contactformulier__melding.is-fout { background: var(--color-groen); color: var(--color-white);
                                      padding: var(--space-300) var(--space-400); }

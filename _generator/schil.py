@@ -10,9 +10,13 @@ De componenten hieronder zijn die van het oorspronkelijke template en zijn niet
 van vorm veranderd. Wat er wel veranderd is:
 
   - De band met klantlogo's toont nu de vaste samenwerkingspartners die
-    www.jboom.nl bij naam noemt, als woordmerk in tekst. Niet als logo: er is
-    geen logobestand van die bedrijven en geen toestemming om het te voeren.
-    Het zijn bovendien partners en geen opdrachtgevers, en dat staat er nu ook.
+    www.jboom.nl bij naam noemt. Het zijn partners en geen opdrachtgevers, en
+    dat staat er ook: de band heet "Met wie wij samenwerken".
+    De beeldmerken in assets/logo/opdrachtgevers/ zijn VOORLOPIG -- tekst,
+    gezet als logo, in de stijl van de template-placeholders. Het zijn niet de
+    echte logo's van die bedrijven; daarvoor is toestemming nodig. De logo's
+    die bij het template zaten staan er niet in: dat zijn merken van bestaande
+    bedrijven die geen partner van J. Boom zijn.
 
   - De citatenslider staat vol met de zeven ondertekende referenties van
     www.jboom.nl, met de naam en de maand die de schrijvers er zelf bij zetten.
@@ -735,9 +739,60 @@ def pagina(bestand, titel, omschrijving, namespace, pagina_css, css_naam,
 #      de vorm, de beweging en het pauzeren bij hover zijn die van het
 #      template gebleven.
 #
-# Elk item is een naam. _logoset() kan ook tuples aan (bestand, naam, breedte,
-# hoogte); komt er ooit een logo met toestemming bij, dan is dat een regel.
-PARTNERS = [naam for naam, _rol, _url in D.PARTNERS]
+# ============================================================================
+#  LET OP -- DE LOGOBAND STAAT OP PLACEHOLDERS EN MOET VOOR LIVE LEEG
+# ============================================================================
+# De dertien beeldmerken hieronder zijn aangeleverd als template-placeholder
+# (Jesse, 10 september 2026) om het ontwerp van de band te kunnen beoordelen.
+# Elf ervan zijn de echte beeldmerken van bestaande bedrijven -- Alstom,
+# Ballast Nedam, Bilfinger, Cosun, Ebert Hera, Electrabel, Freesmij,
+# GE Vernova, Huhtamaki, Ivens en Ooms -- en die zijn GEEN partner of
+# opdrachtgever van J. Boom. Ze komen uit een ander project (de opdrachtgevers
+# van MADEGRO); de herkomstnotitie daar zegt het zelf.
+#
+# De band heet "Met wie wij samenwerken". Zolang deze logo's erin staan beweert
+# de homepage dus een samenwerking die niet bestaat, over bedrijven die je bij
+# naam kunt aanspreken. Dat is prima om lokaal naar de vormgeving te kijken en
+# niet prima om te publiceren.
+#
+# VOOR LIVE (en voor een push naar de publieke repo):
+#   * haal de elf echte bedrijfslogo's uit assets/logo/opdrachtgevers/, of
+#   * vervang ze door de beeldmerken van de zes partners die de bron noemt
+#     (EWP, Select Windows, Smit Heiwerken, De Heer Elektrotechniek, Sanders,
+#     Peter Helmich), met toestemming van die partijen.
+# Staat er niets, dan valt de band terug op de namen als woordmerk; dat is de
+# regel onderaan dit blok en dat is een correcte staat.
+# Zie ook het eerste punt in CONTENT-TODO.md.
+#
+# merwede-bouwgroep.svg en rivierpoort-logistiek.svg zijn geen echte bedrijven:
+# dat zijn woordmerken van een verzonnen opdrachtgever, gemaakt als placeholder.
+# Die misbruiken niemands merk, maar ze beweren nog wel een samenwerking.
+#
+# De breedte is die van het logo op 40px hoog, afgetopt op de 190px die de band
+# als max-width aanhoudt; zonder die aftopping verspringt de band tijdens het
+# laden. Hoogte is altijd 40.
+PARTNERLOGOS = [
+    ('alstom.webp',                'Alstom',                  190, 40),
+    ('ballast-nedam.webp',         'Ballast Nedam',           190, 40),
+    ('bilfinger.webp',             'Bilfinger',               105, 40),
+    ('cosun.webp',                 'Cosun Beet Company',      172, 40),
+    ('ebert-hera.webp',            'Ebert Hera',              190, 40),
+    ('electrabel.webp',            'Electrabel',              102, 40),
+    ('freesmij.webp',              'Freesmij',                154, 40),
+    ('ge-vernova.webp',            'GE Vernova',              181, 40),
+    ('huhtamaki.webp',             'Huhtamaki',               190, 40),
+    ('ivens.webp',                 'Ivens',                   118, 40),
+    ('merwede-bouwgroep.svg',      'Merwede Bouwgroep',       138, 40),
+    ('ooms.webp',                  'Ooms Bouw &amp; Ontwikkeling', 124, 40),
+    ('rivierpoort-logistiek.svg',  'Rivierpoort Logistiek',   158, 40),
+]
+
+# Vangnet: een <img> naar een bestand dat er niet is, is een gat in de band.
+# Alleen de logo's die echt op schijf staan gaan mee; is er geen enkele, dan
+# vallen we terug op de namen van de partners die de bron noemt, als woordmerk.
+_LOGOMAP_PAD = pathlib.Path(__file__).resolve().parent.parent / 'assets' / 'logo' / 'opdrachtgevers'
+_AANWEZIG = [rij for rij in PARTNERLOGOS if (_LOGOMAP_PAD / rij[0]).exists()]
+PARTNERS = _AANWEZIG or [naam for naam, _rol, _url in D.PARTNERS]
 
 
 def _logoset(verborgen=False):

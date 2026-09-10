@@ -9,6 +9,33 @@ Op volgorde van hoeveel het uitmaakt.
 
 ---
 
+## 0. BLOKKEREND: de logoband staat op placeholders
+
+In de band "Met wie wij samenwerken" op de homepage staan dertien
+beeldmerken die als template-placeholder zijn aangeleverd. Elf ervan zijn de
+echte logo's van bestaande bedrijven — Alstom, Ballast Nedam, Bilfinger,
+Cosun, Ebert Hera, Electrabel, Freesmij, GE Vernova, Huhtamaki, Ivens en
+Ooms — en die zijn **geen partner of opdrachtgever van J. Boom**. Ze komen uit
+een ander project. Twee andere (Merwede Bouwgroep, Rivierpoort Logistiek) zijn
+woordmerken van een verzonnen bedrijf.
+
+Zolang dit erin staat beweert de homepage een samenwerking die niet bestaat,
+over bedrijven die je bij naam kunt aanspreken. Bruikbaar om naar de vormgeving
+te kijken; niet om te publiceren, en niet om naar de publieke repo te pushen.
+
+**Wat er moet gebeuren voor live:** de elf echte bedrijfslogo's uit
+`assets/logo/opdrachtgevers/` halen. Twee wegen daarna:
+
+- **De band vullen met de echte partners.** De bron noemt zes vaste partners:
+  EWP, Select Windows, Smit Heiwerken, De Heer Elektrotechniek, Sanders en
+  Peter Helmich. Vraag per partij toestemming om hun beeldmerk te voeren, zet
+  het bestand in de map en de regel in `PARTNERLOGOS` in `_generator/schil.py`.
+- **Of niets doen.** Is de map leeg, dan valt de band automatisch terug op de
+  namen van die zes partners als woordmerk in tekst. Dat is feitelijk correct
+  en vraagt geen toestemming, want een naam noemen is geen merkgebruik.
+
+---
+
 ## 1. Het formulier verstuurt niets
 
 `ENDPOINT` in `contactformulier.js` is leeg, dus er gaat nog geen bericht de
